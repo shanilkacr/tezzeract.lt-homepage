@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'figtree': ['Figtree', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,12 +65,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				tezzeract: {
+					blue: '#00A9EE',
+					darkblue: '#00378A',
+					dark: '#242424',
+					light: '#FFFFFF',
+					black: '#000000'
 				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				'tezzeract': '12px'
+			},
+			backgroundImage: {
+				'tezzeract-gradient': 'linear-gradient(60deg, #00A9EE, #00378A)',
+				'tezzeract-text-gradient': 'linear-gradient(60deg, #00A9EE, #00378A)',
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +100,58 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-right': {
+					'0%': {
+						transform: 'translateX(-100%)'
+					},
+					'100%': {
+						transform: 'translateX(100vw)'
+					}
+				},
+				'typewriter': {
+					'0%': {
+						width: '0'
+					},
+					'100%': {
+						width: '100%'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'orbit': {
+					'0%': {
+						transform: 'rotate(0deg) translateX(60px) rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg) translateX(60px) rotate(-360deg)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'slide-right': 'slide-right 20s linear infinite',
+				'typewriter': 'typewriter 3s steps(50) 1s forwards',
+				'float': 'float 3s ease-in-out infinite',
+				'orbit': 'orbit 8s linear infinite'
 			}
 		}
 	},

@@ -1,0 +1,71 @@
+
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import Navigation from './Navigation';
+import LogoSlider from './LogoSlider';
+
+const HeroSection = () => {
+  return (
+    <section className="relative min-h-screen bg-tezzeract-gradient overflow-hidden">
+      {/* Gradient Mesh Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-tezzeract-blue/20 via-transparent to-tezzeract-darkblue/30"></div>
+      
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-tezzeract-blue/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+      </div>
+
+      <Navigation />
+
+      <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Main Headline */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            Save <span className="text-yellow-300">100+ hours</span> a week with<br />
+            <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              AI-Powered Workflow Automations!
+            </span>
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Tezzeract helps businesses unlock efficiency and scale through intelligent AI agents, 
+            workflow automation, Gen-AI powered creatives, and full-stack AI development.
+          </p>
+
+          {/* Logo Slider */}
+          <div className="mb-12">
+            <LogoSlider />
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
+              size="lg" 
+              className="bg-white text-tezzeract-darkblue hover:bg-white/90 px-8 py-6 text-lg font-semibold rounded-tezzeract shadow-2xl transform hover:scale-105 transition-all duration-300"
+            >
+              Book a Free Strategy Call
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-2 border-white text-white hover:bg-white hover:text-tezzeract-darkblue px-8 py-6 text-lg font-semibold rounded-tezzeract backdrop-blur-sm transform hover:scale-105 transition-all duration-300"
+            >
+              Get Started
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
