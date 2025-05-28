@@ -40,7 +40,7 @@ const ServicesOverview = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
             Smart Solutions, Built for Scale
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+          <p className="text-black text-base max-w-3xl font-thin mx-auto">
             Transform your business with our comprehensive AI-powered solutions designed to streamline operations and accelerate growth.
           </p>
         </div>
@@ -49,7 +49,7 @@ const ServicesOverview = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-white rounded-tezzeract p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+              className="bg-gradient-to-br from-[#00A9EE] from-34% to-[#00378A] border-2 border-[#FFFFFF40] rounded-[20px] shadow-[0_0_44px_0_rgba(13,105,143,0.75)] p-5"
             >
               <div className="mb-6">
                 <div className={`w-16 h-16 rounded-tezzeract bg-gradient-to-br ${service.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -57,11 +57,11 @@ const ServicesOverview = () => {
                 </div>
               </div>
               
-              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-tezzeract-darkblue transition-colors">
+              <h3 className="text-xl font-thin text-white mb-4 group-hover:text-tezzeract-darkblue transition-colors">
                 {service.title}
               </h3>
               
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white text-sm font-thin leading-relaxed">
                 {service.description}
               </p>
 

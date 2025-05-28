@@ -23,8 +23,8 @@ const HeroSection = () => {
       <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
         <div className="max-w-6xl mx-auto text-center">
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Save <span className="text-yellow-300">100+ hours</span> a week with
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-thin text-white mb-6 leading-tight">
+            Save <span className="text-white font-semibold">100+ hours</span> a week with
             <br />
             <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               AI-Powered Workflow Automations!
@@ -45,10 +45,19 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Logo Slider */}
-          <div className="mb-12">
+ 
+       {/* Logo Slider */}
+
+         {/*   <div className="mb-12">
             <LogoSlider />
           </div>
+          
+          */}
+     
+      
+      
+
+         
         </div>
       </div>
 
