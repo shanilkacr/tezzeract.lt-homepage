@@ -31,9 +31,9 @@ const ServicesOverview = () => {
   ];
 
   return (
-    <section className="bg-tezzeract-light py-20 relative overflow-hidden">
+    <section className="bg-tezzeract-light py-20 relative overflow-hidden" id='services'>
       {/* Smooth transition overlay */}
-      <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-tezzeract-dark to-transparent"></div>
+      <div className="absolute top-0 left-0 right-0 h-20"></div>
       
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
