@@ -17,7 +17,7 @@ const Index = () => {
       <ValueProposition />
       <ServicesOverview />
       <BentoGrid />
-      <PortfolioSection />
+
 
       <FinalCTA />
       <Footer />
