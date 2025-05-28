@@ -14,7 +14,7 @@ const Navigation = () => {
         {/* Logo */}
         <div>
       
-          <img src="/logowhite.webp" alt="Tezzeract Logo" className="h-8" />
+          <img src="/logowhite.webp" alt="Tezzeract Logo" className="h-6" />
         </div>
 {/* Desktop Navigation */}
 <div className="hidden md:flex items-center space-x-8">
@@ -64,7 +64,7 @@ const Navigation = () => {
         <div className="hidden md:flex items-center space-x-4">
          
         
-<Button className="bg-gradient-to-bl from-[#00378AB0] to-[#00A9EE] hover:bg-gradient-to-r hover:from-white hover:to-[#D8F4FF] shadow-[0_70px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_70px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl px-8 py-4 text-white font-thin hover:text-[#005D8A] transition-all duration-300 sm:px-12 sm:py-5">
+<Button className="bg-gradient-to-tr from-[#00378AB0] to-[#00A9EE] hover:bg-gradient-to-r hover:from-white hover:to-[#D8F4FF] shadow-[0_70px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_70px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl px-8 py-4 text-white font-thin hover:text-[#005D8A] transition-all duration-300 sm:px-12 sm:py-5">
   Get on a call
 </Button>
         </div>
