@@ -1,73 +1,108 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "./Navigation";
 import LogoSlider from "./LogoSlider";
 
 const HeroSection = () => {
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const viewportHeight = window.innerHeight;
+      const startScroll = viewportHeight * 0.1; // 10% of viewport height
+      const endScroll = viewportHeight * 0.2; // 20% of viewport height
+      const scrollY = window.scrollY;
+
+      // Calculate scale: 1 at scrollY <= startScroll, 0.95 at scrollY >= endScroll
+      if (scrollY <= startScroll) {
+        setScale(1);
+      } else if (scrollY >= endScroll) {
+        setScale(0.95);
+      } else {
+        // Linear interpolation between startScroll and endScroll
+        const progress = (scrollY - startScroll) / (endScroll - startScroll);
+        const newScale = 1 - progress * 0.05; // 1 to 0.95
+        setScale(newScale);
+      }
+    };
+
+    // Throttle scroll events to ~60fps (16ms)
+    let timeout;
+    const throttledHandleScroll = () => {
+      if (!timeout) {
+        timeout = setTimeout(() => {
+          handleScroll();
+          timeout = null;
+        }, 32);
+      }
+    };
+
+    window.addEventListener("scroll", throttledHandleScroll);
+
+    // Cleanup listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", throttledHandleScroll);
+      if (timeout) clearTimeout(timeout);
+    };
+  }, []);
+
   return (
-    <section className="relative min-h-screen bg-tezzeract-gradient overflow-hidden">
-      {/* Gradient Mesh Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-tezzeract-blue/20 via-transparent to-tezzeract-darkblue/30"></div>
-
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float"></div>
-        <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-tezzeract-blue/10 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "1s" }}
-        ></div>
-      </div>
-
+    <div className="bg-white">
+      {/* Background Gradient */}
       <Navigation />
 
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-thin text-white mb-6 leading-tight">
-            Save <span className="text-white font-semibold">100+ hours</span> a week with
-            <br />
-            <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              AI-Powered Workflow Automations!
-            </span>
-          </h1>
+      <section
+        className="relative h-[90vh] bg-tezzeract-gradient overflow-hidden transition-transform duration-[1500ms] ease-in-out bor rounded-b-[20px]"
+        style={{ transform: `scale(${scale})`, transformOrigin: "center top" }}
+      >
+        {/* Gradient Mesh Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-tezzeract-blue/20 via-transparent to-tezzeract-darkblue/30"></div>
 
-          {/* Subheadline */}
-          <p className="text-xl md:text-xl font-thin text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Tezzeract helps businesses unlock efficiency and scale through
-            intelligent AI agents, workflow automation, Gen-AI powered
-            creatives, and full-stack AI development.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-8">
-            <Button className="bg-gradient-to-r from-white to-[#D8F4FF] hover:bg-gradient-to-bl hover:from-[#00378AB0] hover:to-[#00A9EE] shadow-[0_70px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_70px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl px-8 py-4 text-[#005D8A] font-thin hover:text-white transition-all duration-300 sm:px-12 sm:py-5">
-              Book a Free Strategy Call
-            </Button>
-          </div>
-
- 
-       {/* Logo Slider */}
-
-         {/*   <div className="mb-12">
-            <LogoSlider />
-          </div>
-          
-          */}
-     
-      
-      
-
-         
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float"></div>
+          <div
+            className="absolute bottom-20 right-10 w-96 h-96 bg-tezzeract-blue/10 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
         </div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+        <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
+          <div className="max-w-6xl mx-auto text-center">
+            {/* Main Headline */}
+            <h1 className="tezzeracth1">
+              Save <span className="text-white font-semibold">100+ hours</span> a week with
+              <br />
+              <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                AI-Powered Workflow Automations!
+              </span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-l font-thin text-white mb-8 max-w-4xl mx-auto leading-relaxed">
+              Tezzeract helps businesses unlock efficiency and scale through
+              intelligent AI agents, workflow automation, Gen-AI powered
+              creatives, and full-stack AI development.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-8">
+              <Button
+                className="bg-gradient-to-r from-white to-[#D8F4FF] hover:bg-gradient-to-tr hover:from-[#00378AB0] hover:to-[#00A9EE] shadow-[0_0px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_-5px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl text-[#005D8A] font-thin hover:text-white text-base transition-all duration-300 px-8 py-6"
+              >
+                Book a Free Strategy Call
+              </Button>
+            </div>
+
+            {/* Logo Slider */}
+            {/* Uncomment when needed */}
+            {/* <div className="mb-12">
+              <LogoSlider />
+            </div> */}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

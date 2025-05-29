@@ -44,7 +44,8 @@ const Strategic = () => {
   }, []);
 
   return (
-    <section
+  <div className="bg-white">
+        <section
       ref={sectionRef}
       className="bg-tezzeract-light py-20 h-[80vh] flex items-center justify-center relative overflow-hidden"
       style={{ transition: 'transform 0.1s ease-out, opacity 0.1s ease-out' }}
@@ -55,6 +56,8 @@ const Strategic = () => {
         </h2>
       </div>
     </section>
+  </div>
+
   );
 };
 
