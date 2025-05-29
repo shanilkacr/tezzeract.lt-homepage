@@ -47,7 +47,7 @@ const BentoLayout = () => {
       stat: "80%",
       description: "reduction in customer service costs",
       source: "(IBM)",
-    gradient: "from-green-500 to-emerald-500",
+      gradient: "from-green-500 to-emerald-500",
       size: "large",
     },
     {
@@ -80,7 +80,7 @@ const BentoLayout = () => {
       gradient: "from-green-500 to-emerald-500",
       size: "large",
     },
-    
+
     {
       tag: "Operations",
       title: "AI Inventory Optimization",
@@ -151,7 +151,7 @@ const BentoLayout = () => {
               <div className="text-blue-200 text-sm">(IBM)</div>
             </div> */}
 
-            {/* Decorative elements
+          {/* Decorative elements
             <div className="absolute -right-8 -top-8 w-32 h-32 bg-blue-500 rounded-full opacity-20"></div>
             <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-blue-400 rounded-xl opacity-30"></div>
           </div> */}
@@ -173,7 +173,7 @@ const BentoLayout = () => {
                 <span
                   className={
                     area.size === "large"
-                      ? "bg-[radial-gradient(circle,_#FFFFFF20,_#FFFFFF50)] border border-white/20 text-white px-4 py-2 rounded-xl text-sm font-light shadow-lg"
+                      ? "bg-[radial-gradient(circle,_#FFFFFF20,_#FFFFFF50)] border border-white/20 text-white px-4 py-2 rounded-xl text-sm font-light "
                       : "bg-slate-700 border border-slate-500 text-slate-300 px-4 py-2 rounded-lg text-xs"
                   }
                 >
@@ -204,7 +204,9 @@ const BentoLayout = () => {
                       </div>
                     </div>
                     {area.source && (
-                      <div className="text-blue-200 text-sm mt-3" >{area.source}</div>
+                      <div className="text-blue-200 text-sm mt-3">
+                        {area.source}
+                      </div>
                     )}
 
                     {/* Decorative elements */}
