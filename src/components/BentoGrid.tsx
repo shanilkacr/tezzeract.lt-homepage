@@ -113,10 +113,10 @@ const BentoLayout = () => {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
           {/* Main Stats Display - Large */}
-          <div className="md:col-span-2 lg:col-span-2 bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-10 text-white relative overflow-hidden">
-            <div className="absolute top-6 left-6">
+          <div className="md:col-span-2 lg:col-span-2 border border-white/40 bg-gradient-to-br from-[#00A9EE] to-[#00378A] rounded-3xl p-12  text-white relative overflow-hidden hover: transition-all duration-300 transform hover:-translate-y-2">
+            <div className="top-6 left-6">
               <span className="bg-[radial-gradient(circle,_#FFFFFF20,_#FFFFFF50)] border border-white/20 text-white px-4 py-2 rounded-xl text-sm font-light shadow-lg">
                 Customer Experience
               </span>
@@ -143,7 +143,7 @@ const BentoLayout = () => {
 
             {/* Decorative elements */}
             <div className="absolute -right-8 -top-8 w-32 h-32 bg-blue-500 rounded-full opacity-20"></div>
-            <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-blue-400 rounded-full opacity-30"></div>
+            <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-blue-400 rounded-xl opacity-30"></div>
           </div>
 
           {/* AI Automation Badge */}
@@ -171,7 +171,7 @@ const BentoLayout = () => {
             <div
               key={index}
               className={`
-                group2 bg-gradient-to-br from-blue-600 to-blue-800  border-slate-700 rounded-3xl p-6 text-white relative overflow-hidden hover:  border-blue-500 transition-all duration-300 transform hover:-translate-y-1
+                group2 bg-gradient-to-br from-[#0078A8] to-[#002152] border-2  border-slate-700 rounded-3xl p-12 text-white relative overflow-hidden hover:  border-blue-500 transition-all duration-300 transform hover:-translate-y-1
                 ${
                   area.size === "large"
                     ? "md:col-span-2 lg:col-span-2"
@@ -180,22 +180,21 @@ const BentoLayout = () => {
               `}
             >
               {/* Tag */}
-              <div className="absolute top-6 left-6">
-                <span className="bg-white bg-opacity-20 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              <div className="">
+                <span className="bg-[radial-gradient(circle,_#FFFFFF20,_#FFFFFF50)] border border-white/20 text-white px-4 py-2 rounded-xl text-sm font-light shadow-lg">
                   {area.tag}
                 </span>
               </div>
 
               {/* Content */}
-              <div className="mt-16">
+              <div className="">
                 <h2 className="text-xl md:text-2xl lg:text-3xl mb-4">
                   <b>{area.title.split(" ").slice(0, -2).join(" ")}</b>
                   <br />
-                  <b>{area.title.split(" ").slice(-2).join(" ")}</b> driving up
-                  to
+                  <b>{area.title.split(" ").slice(-2).join(" ")}</b> can save
                 </h2>
 
-                <div className="flex items-center gap-4 mb-4">
+                <div className=" items-center gap-4 mb-4">
                   <div
                     className={`${
                       area.size === "large"
