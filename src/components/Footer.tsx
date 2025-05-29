@@ -1,41 +1,40 @@
-
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Twitter, Linkedin, Github, Mail, Phone, MapPin } from 'lucide-react';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Twitter, Linkedin, Github, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const navigation = {
     services: [
-      { name: 'Workflow Automation', href: '#' },
-      { name: 'AI Agents', href: '#' },
-      { name: 'Digital Transformation', href: '#' },
-      { name: 'Generative AI', href: '#' }
+      { name: "Workflow Automation", href: "#" },
+      { name: "AI Agents", href: "#" },
+      { name: "Digital Transformation", href: "#" },
+      { name: "Generative AI", href: "#" },
     ],
     solutions: [
-      { name: 'Customer Experience', href: '#' },
-      { name: 'Finance Automation', href: '#' },
-      { name: 'HR Operations', href: '#' },
-      { name: 'Sales & Marketing', href: '#' }
+      { name: "Customer Experience", href: "#" },
+      { name: "Finance Automation", href: "#" },
+      { name: "HR Operations", href: "#" },
+      { name: "Sales & Marketing", href: "#" },
     ],
     company: [
-      { name: 'About Us', href: '#' },
-      { name: 'Careers', href: '#' },
-      { name: 'Blog', href: '#' },
-      { name: 'Case Studies', href: '#' }
+      { name: "About Us", href: "#" },
+      { name: "Careers", href: "#" },
+      { name: "Blog", href: "#" },
+      { name: "Case Studies", href: "#" },
     ],
     resources: [
-      { name: 'Documentation', href: '#' },
-      { name: 'API Reference', href: '#' },
-      { name: 'Help Center', href: '#' },
-      { name: 'Contact Support', href: '#' }
-    ]
+      { name: "Documentation", href: "#" },
+      { name: "API Reference", href: "#" },
+      { name: "Help Center", href: "#" },
+      { name: "Contact Support", href: "#" },
+    ],
   };
 
   const socialLinks = [
-    { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
-    { name: 'GitHub', icon: Github, href: '#' },
+    { name: "Twitter", icon: Twitter, href: "#" },
+    { name: "LinkedIn", icon: Linkedin, href: "#" },
+    { name: "GitHub", icon: Github, href: "#" },
   ];
 
   return (
@@ -48,7 +47,8 @@ const Footer = () => {
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-gradient">Tezzeract</h3>
               <p className="text-gray-400 mt-2 leading-relaxed">
-                Transforming businesses through intelligent AI automation and workflow optimization.
+                Transforming businesses through intelligent AI automation and
+                workflow optimization.
               </p>
             </div>
 
@@ -72,8 +72,8 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-3">Stay Updated</h4>
               <div className="flex space-x-2">
-                <Input 
-                  placeholder="Enter your email" 
+                <Input
+                  placeholder="Enter your email"
                   className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
                 />
                 <Button className="bg-tezzeract-gradient hover:opacity-90 transition-opacity">
@@ -89,8 +89,8 @@ const Footer = () => {
             <ul className="space-y-2">
               {navigation.services.map((item) => (
                 <li key={item.name}>
-                  <a 
-                    href={item.href} 
+                  <a
+                    href={item.href}
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {item.name}
@@ -105,8 +105,8 @@ const Footer = () => {
             <ul className="space-y-2">
               {navigation.solutions.map((item) => (
                 <li key={item.name}>
-                  <a 
-                    href={item.href} 
+                  <a
+                    href={item.href}
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {item.name}
@@ -121,24 +121,8 @@ const Footer = () => {
             <ul className="space-y-2">
               {navigation.company.map((item) => (
                 <li key={item.name}>
-                  <a 
-                    href={item.href} 
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2">
-              {navigation.resources.map((item) => (
-                <li key={item.name}>
-                  <a 
-                    href={item.href} 
+                  <a
+                    href={item.href}
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {item.name}
@@ -172,9 +156,15 @@ const Footer = () => {
 
             {/* Legal Links */}
             <div className="flex space-x-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+              <a href="#" className="hover:text-white transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                Terms of Service
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                Cookie Policy
+              </a>
             </div>
           </div>
         </div>
