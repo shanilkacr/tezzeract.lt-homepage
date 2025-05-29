@@ -7,7 +7,7 @@ import BentoGrid from '@/components/BentoGrid';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 import Strategic from '@/components/Strategic';
-import PortfolioSection  from '@/components/portfolio-section';
+
 
 const Index = () => {
   return (
@@ -17,7 +17,7 @@ const Index = () => {
       <ValueProposition />
       <ServicesOverview />
       <BentoGrid />
-      <PortfolioSection />
+
 
       <FinalCTA />
       <Footer />
