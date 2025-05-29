@@ -97,6 +97,12 @@
   .text-gradient2 {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-[#D8F4FF];
   }
+
+  .text-gradient3 {
+    @apply bg-clip-text text-transparent;
+    background-image: radial-gradient(ellipse at bottom right, #1962cf, #00A9EE);
+  }
+
   .tezzeracth2 {
     @apply text-4xl md:text-6xl font-thin text-gradient mb-6 tracking-[-2.1px];
     -webkit-text-stroke: 1px #0066FF52; /* Text stroke for WebKit browsers */
@@ -107,6 +113,10 @@
     -webkit-text-stroke: 1px #A5E5FF7A; /* Text stroke for WebKit browsers */
     text-stroke: 1px #A5E5FF7A; /* Standard property (limited support) */
     text-shadow: 0 0 43px #FFFFFF4D; 
+  }
+  .tezzeracth3 {
+    @apply text-7xl md:text-7xl font-thin text-gradient3 mb-6 tracking-[-2.1px];
+    
   }
 }
 

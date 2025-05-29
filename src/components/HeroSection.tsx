@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "./Navigation";
 import LogoSlider from "./LogoSlider";
+import HeroVideo from "@/assets/Hero Loop V2.webm"; // Assuming you have a video file
 
 const HeroSection = () => {
   const [scale, setScale] = useState(1);
@@ -47,15 +48,28 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#242424]">
       {/* Background Gradient */}
       <Navigation />
 
       <section
-        className="relative h-[90vh] bg-tezzeract-gradient overflow-hidden transition-transform duration-[1500ms] ease-in-out bor rounded-b-[20px]"
+        className="relative h-[90vh] bg-tezzeract-gradient overflow-hidden transition-transform duration-[1500ms] ease-in-out rounded-b-[20px]"
         style={{ transform: `scale(${scale})`, transformOrigin: "center top" }}
       >
-        {/* Gradient Mesh Background */}
+        {/* Background Video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ mixBlendMode: "multiply" }}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src={HeroVideo} type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Gradient Mesh Background Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-tezzeract-blue/20 via-transparent to-tezzeract-darkblue/30"></div>
 
         {/* Animated Background Elements */}
