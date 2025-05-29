@@ -27,8 +27,6 @@ const ValueProposition: FC = () => {
       types: ['words', 'chars']
     }) as SplitTypeResult;
 
-   
-
     if (!split.chars) return;
 
     // GSAP ScrollTrigger animation
@@ -43,8 +41,8 @@ const ValueProposition: FC = () => {
 
     tl.to(split.chars, {
       duration: 0.3,
-         color: 'white',
-          stagger: 0.1,
+      color: '#00a9ee',
+      stagger: 0.1,
     }, 0.1);
 
     // Cleanup
@@ -59,8 +57,8 @@ const ValueProposition: FC = () => {
       <style>
         {`
           .cool-split h1 {
-            width: 85%;
-            color: rgba(255, 255, 255, 0.125);
+            width: 5%;
+            color: #00378A;
           }
         `}
       </style>
@@ -69,7 +67,7 @@ const ValueProposition: FC = () => {
         <div className="grid md:grid-cols-5 gap-12 items-center mb-20">
           {/* Left Column - 60% */}
           <div className="md:col-span-3">
-            <h2 ref={h1Ref} className="cool-split text-6xl font-light">
+            <h2 ref={h1Ref} className="cool-split text-[#00378a] text-6xl font-light">
               Every minute your team spends on repetitive tasks is a minute not spent on innovation.
             </h2>
           </div>
@@ -82,7 +80,7 @@ const ValueProposition: FC = () => {
                 alt="Tezzeract Object"
                 className="w-full h-full object-cover rounded-lg shadow-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-tezzeract-light opacity-20 rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-tezzeract-black opacity-20 rounded-lg"></div>
             </div>
           </div>
         </div>
@@ -102,16 +100,14 @@ const ValueProposition: FC = () => {
               </div>
 
               {/* Orbiting Icons */}
-             
             </div>
           </div>
 
           {/* Right Column - 60% */}
           <div className="md:col-span-3">
-            <h2 className= "md:text-6xl text-6xl font-light text-white mb-6">
-            Tezzeract builds smart automation systems that handle routine tasks, freeing your team to focus on growing your business.
+            <h2 className="md:text-6xl text-6xl font-light text-white mb-6">
+              Tezzeract builds smart automation systems that handle routine tasks, freeing your team to focus on growing your business.
             </h2>
-            
           </div>
         </div>
       </div>

@@ -113,10 +113,10 @@ const BentoLayout = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+          <h2 className="tezzeracth3">
             Transform Every Part of Your Business
-          </h1>
-          <p className="text-slate-400 text-lg max-w-3xl mx-auto">
+          </h2>
+          <p className="text-white">
             Real results from AI implementation across industries. See how
             businesses like yours are achieving measurable improvements.
           </p>
