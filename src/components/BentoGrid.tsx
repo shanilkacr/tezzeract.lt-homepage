@@ -42,14 +42,23 @@ const BentoLayout = () => {
 
   const businessAreas = [
     {
+      tag: "Customer Experience",
+      title: "Email & Chat Response Automation",
+      stat: "80%",
+      description: "reduction in customer service costs",
+      source: "(IBM)",
+      gradient: "from-green-500 to-emerald-500",
+      size: "large",
+    },
+    {
       tag: "Human Resources",
-      title: "HR Automation",
+      title: "HR Automation can save",
       stat: "40%",
-      description: "time saved on administrative tasks",
+      description: "time spent on administrative tasks",
       source: "(Deloitte Human Capital Trends, 2024)",
       icon: Clock,
       gradient: "from-purple-500 to-violet-500",
-      size: "medium",
+      size: "small",
     },
     {
       tag: "Sales & Marketing",
@@ -59,7 +68,7 @@ const BentoLayout = () => {
       source: "",
       icon: TrendingUp,
       gradient: "from-orange-500 to-red-500",
-      size: "medium",
+      size: "small",
     },
     {
       tag: "Finance",
@@ -71,6 +80,7 @@ const BentoLayout = () => {
       gradient: "from-green-500 to-emerald-500",
       size: "large",
     },
+
     {
       tag: "Operations",
       title: "AI Inventory Optimization",
@@ -115,9 +125,9 @@ const BentoLayout = () => {
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
           {/* Main Stats Display - Large */}
-          <div className="md:col-span-2 lg:col-span-2 border border-white/40 bg-gradient-to-br from-[#00A9EE] to-[#00378A] rounded-3xl p-12  text-white relative overflow-hidden hover: transition-all duration-300 transform hover:-translate-y-2">
+          {/* <div className="md:col-span-2 lg:col-span-2 border border-white/40 bg-gradient-to-br from-[#00A9EE] to-[#00378A] rounded-3xl p-12  text-white relative overflow-hidden hover: transition-all duration-300 transform hover:-translate-y-2">
             <div className="top-6 left-6">
-              <span className="bg-[radial-gradient(circle,_#FFFFFF20,_#FFFFFF50)] border border-white/20 text-white px-4 py-2 rounded-xl text-sm font-light shadow-lg">
+              <span className="bg-[radial-gradient(circle,_#FFFFFF20,_#FFFFFF50)] border border-white/20 text-white px-4 py-2 rounded-xl text-sm font-light">
                 Customer Experience
               </span>
             </div>
@@ -139,88 +149,88 @@ const BentoLayout = () => {
                 </div>
               </div>
               <div className="text-blue-200 text-sm">(IBM)</div>
-            </div>
+            </div> */}
 
-            {/* Decorative elements */}
+          {/* Decorative elements
             <div className="absolute -right-8 -top-8 w-32 h-32 bg-blue-500 rounded-full opacity-20"></div>
             <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-blue-400 rounded-xl opacity-30"></div>
-          </div>
-
-          {/* AI Automation Badge */}
-          <div className="bg-gradient-to-br from-purple-600 to-indigo-600 rounded-3xl p-6 text-white flex flex-col justify-center">
-            <div className="text-center">
-              <Bot className="w-12 h-12 mx-auto mb-4" />
-              <div className="font-bold text-lg mb-2">AI Automation</div>
-              <div className="text-purple-100 text-sm">
-                Across All Departments
-              </div>
-            </div>
-          </div>
-
-          {/* Implementation Ready */}
-          <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl p-6 text-white flex items-center justify-center">
-            <div className="text-center">
-              <Zap className="w-8 h-8 mx-auto mb-3" />
-              <div className="font-semibold mb-1">Ready to</div>
-              <div className="font-bold text-lg">Implement</div>
-            </div>
-          </div>
+          </div> */}
 
           {/* Business Areas Cards */}
           {businessAreas.map((area, index) => (
             <div
               key={index}
               className={`
-                group2 bg-gradient-to-br from-[#0078A8] to-[#002152] border-2  border-slate-700 rounded-3xl p-12 text-white relative overflow-hidden hover:  border-blue-500 transition-all duration-300 transform hover:-translate-y-1
                 ${
                   area.size === "large"
-                    ? "md:col-span-2 lg:col-span-2"
-                    : "md:col-span-1 lg:col-span-1"
+                    ? "md:col-span-2 lg:col-span-2 border border-white/40 bg-gradient-to-br from-[#00A9EE] to-[#00378A] rounded-3xl p-12 text-white relative overflow-hidden hover: transition-all duration-300 transform hover:-translate-y-2"
+                    : "bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 rounded-3xl p-10 text-white relative overflow-hidden hover:border-slate-500 transition-all duration-300 transform hover:-translate-y-1"
                 }
               `}
             >
               {/* Tag */}
-              <div className="">
-                <span className="bg-[radial-gradient(circle,_#FFFFFF20,_#FFFFFF50)] border border-white/20 text-white px-4 py-2 rounded-xl text-sm font-light shadow-lg">
+              <div className={area.size === "large" ? "top-6 left-6" : ""}>
+                <span
+                  className={
+                    area.size === "large"
+                      ? "bg-[radial-gradient(circle,_#FFFFFF20,_#FFFFFF50)] border border-white/20 text-white px-4 py-2 rounded-xl text-sm font-light "
+                      : "bg-slate-700 border border-slate-500 text-slate-300 px-4 py-2 rounded-lg text-xs"
+                  }
+                >
                   {area.tag}
                 </span>
               </div>
 
               {/* Content */}
-              <div className="">
-                <h2 className="text-xl md:text-2xl lg:text-3xl mb-4">
-                  <b>{area.title.split(" ").slice(0, -2).join(" ")}</b>
-                  <br />
-                  <b>{area.title.split(" ").slice(-2).join(" ")}</b> can save
-                </h2>
+              <div className={area.size === "large" ? "mt-8" : "mt-8"}>
+                {area.size === "large" ? (
+                  <>
+                    <h2 className="text-3xl font-light">
+                      <span className="font-semibold">
+                        {area.title.split(" ").slice(0, -1).join(" ")}
+                        <br />
+                        {area.title.split(" ").slice(-1).join(" ")}
+                      </span>{" "}
+                      driving up to
+                    </h2>
 
-                <div className=" items-center gap-4 mb-4">
-                  <div
-                    className={`${
-                      area.size === "large"
-                        ? "text-6xl md:text-7xl"
-                        : "text-4xl md:text-5xl"
-                    } font-light`}
-                  >
-                    {area.stat}
-                  </div>
-                  <div
-                    className={`${
-                      area.size === "large"
-                        ? "text-2xl md:text-3xl"
-                        : "text-lg md:text-xl"
-                    } leading-tight text-white text-opacity-90`}
-                  >
-                    {area.description.split(" ").slice(0, 4).join(" ")}
-                    <br />
-                    {area.description.split(" ").slice(4).join(" ")}
-                  </div>
-                </div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="text-7xl md:text-7xl font-light ">
+                        {area.stat}
+                      </div>
+                      <div className="text-3xl leading-tight text-blue-100 font-light">
+                        {area.description.split(" ").slice(0, 5).join(" ")}
+                        <br />
+                      </div>
+                    </div>
+                    {area.source && (
+                      <div className="text-blue-200 text-sm mt-3">
+                        {area.source}
+                      </div>
+                    )}
 
-                {area.source && (
-                  <div className="text-white text-opacity-70 text-sm">
-                    {area.source}
-                  </div>
+                    {/* Decorative elements */}
+                    <div className="absolute -right-8 -top-8 w-32 h-32 bg-blue-500 rounded-full opacity-20"></div>
+                    <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-blue-400 rounded-xl opacity-30"></div>
+                  </>
+                ) : (
+                  <>
+                    <h3 className="text-3xl font-semibold mb-3">
+                      {area.title}
+                    </h3>
+
+                    <div className="text-7xl font-light mb-2">{area.stat}</div>
+
+                    <div className="text-slate-300 text-xl mb-3">
+                      {area.description}
+                    </div>
+
+                    {area.source && (
+                      <div className="text-slate-400 text-xs">
+                        {area.source}
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
             </div>
@@ -237,13 +247,12 @@ const BentoLayout = () => {
               </div>
             </div>
           </div>
-          <div className="bg-gradient-to-br from-purple-600 to-indigo-600 rounded-3xl p-6 text-white flex flex-col justify-center">
+          {/* Implementation Ready */}
+          <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl p-6 text-white flex items-center justify-center">
             <div className="text-center">
-              <Bot className="w-12 h-12 mx-auto mb-4" />
-              <div className="font-bold text-lg mb-2">AI Automation</div>
-              <div className="text-purple-100 text-sm">
-                Across All Departments
-              </div>
+              <Zap className="w-8 h-8 mx-auto mb-3" />
+              <div className="font-semibold mb-1">Ready to</div>
+              <div className="font-bold text-lg">Implement</div>
             </div>
           </div>
 
