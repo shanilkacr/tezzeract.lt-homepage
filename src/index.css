@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 0%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -44,6 +44,7 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+  
 
   .dark {
     --background: 222.2 84% 4.9%;
@@ -76,6 +77,8 @@
   }
 }
 
+
+
 @layer base {
   * {
     @apply border-border;
@@ -85,6 +88,29 @@
     @apply bg-background text-foreground font-figtree;
   }
 }
+@layer components {
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-500; /* Example gradient */
+  }
+
+  .text-gradient2 {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-[#D8F4FF];
+  }
+  .tezzeracth2 {
+    @apply text-4xl md:text-6xl font-thin text-gradient mb-6 tracking-[-2.1px];
+    -webkit-text-stroke: 1px #0066FF52; /* Text stroke for WebKit browsers */
+    text-stroke: 1px #0066FF52; /* Standard property (limited support) */
+  }
+  .tezzeracth1 {
+    @apply text-7xl md:text-7xl font-thin text-gradient2 mb-6 tracking-[-2.1px];
+    -webkit-text-stroke: 1px #A5E5FF7A; /* Text stroke for WebKit browsers */
+    text-stroke: 1px #A5E5FF7A; /* Standard property (limited support) */
+    text-shadow: 0 0 43px #FFFFFF4D; 
+  }
+}
+
+
 
 @layer utilities {
   .text-gradient {
