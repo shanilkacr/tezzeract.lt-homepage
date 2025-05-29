@@ -45,7 +45,7 @@ const BentoLayout = () => {
       tag: "Customer Experience",
       title: "Email & Chat Response Automation",
       stat: "80%",
-      description: "reduction in customer service costs",
+      description: "driving up to 80% reduction in customer service costs",
       source: "(IBM)",
       gradient: "from-green-500 to-emerald-500",
       size: "large",
@@ -191,7 +191,7 @@ const BentoLayout = () => {
                         <br />
                         {area.title.split(" ").slice(-1).join(" ")}
                       </span>{" "}
-                      driving up to
+                      {area.description.split(" ").slice(0,3).join(" ")}
                     </h2>
 
                     <div className="flex items-center gap-4 mb-4">
@@ -199,7 +199,8 @@ const BentoLayout = () => {
                         {area.stat}
                       </div>
                       <div className="text-3xl leading-tight text-blue-100 font-light">
-                        {area.description.split(" ").slice(0, 5).join(" ")}
+                        {area.description.split(" ").slice(4, 10).join(" ")}
+
                         <br />
                       </div>
                     </div>

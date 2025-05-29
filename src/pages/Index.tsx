@@ -7,6 +7,7 @@ import BentoGrid from '@/components/BentoGrid';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 import Strategic from '@/components/Strategic';
+import GrowthCTA from '@/components/GrowthCTA';
 
 
 const Index = () => {
@@ -18,8 +19,7 @@ const Index = () => {
       <ServicesOverview />
       <BentoGrid />
 
-
-      <FinalCTA />
+      <GrowthCTA />
       <Footer />
     </div>
   );
