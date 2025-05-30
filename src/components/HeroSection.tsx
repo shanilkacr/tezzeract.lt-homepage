@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "./Navigation";
 import LogoSlider from "./LogoSlider";
@@ -6,46 +6,52 @@ import HeroVideo from "@/assets/Hero Loop V2.webm"; // Assuming you have a video
 
 const HeroSection = () => {
   const [scale, setScale] = useState(1);
+  const rafRef = useRef<number>();
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = useCallback(() => {
+    const viewportHeight = window.innerHeight;
+    const startScroll = viewportHeight * 0.1; // 10% of viewport height
+    const endScroll = viewportHeight * 0.2; // 20% of viewport height
+    const scrollY = window.scrollY;
+
+    // Calculate scale: 1 at scrollY <= startScroll, 0.95 at scrollY >= endScroll
+    let newScale;
+    if (scrollY <= startScroll) {
+      newScale = 1;
+    } else if (scrollY >= endScroll) {
+      newScale = 0.95;
+    } else {
+      // Linear interpolation between startScroll and endScroll
+      const progress = (scrollY - startScroll) / (endScroll - startScroll);
+      newScale = 1 - progress * 0.05; // 1 to 0.95
+    }
+
+    // Use transform directly instead of React state for better performance
+    if (sectionRef.current) {
+      sectionRef.current.style.transform = `scale(${newScale})`;
+    }
+  }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const viewportHeight = window.innerHeight;
-      const startScroll = viewportHeight * 0.1; // 10% of viewport height
-      const endScroll = viewportHeight * 0.2; // 20% of viewport height
-      const scrollY = window.scrollY;
-
-      // Calculate scale: 1 at scrollY <= startScroll, 0.95 at scrollY >= endScroll
-      if (scrollY <= startScroll) {
-        setScale(1);
-      } else if (scrollY >= endScroll) {
-        setScale(0.95);
-      } else {
-        // Linear interpolation between startScroll and endScroll
-        const progress = (scrollY - startScroll) / (endScroll - startScroll);
-        const newScale = 1 - progress * 0.05; // 1 to 0.95
-        setScale(newScale);
-      }
-    };
-
-    // Throttle scroll events to ~60fps (16ms)
-    let timeout;
+    // Use requestAnimationFrame for smooth animation
     const throttledHandleScroll = () => {
-      if (!timeout) {
-        timeout = setTimeout(() => {
-          handleScroll();
-          timeout = null;
-        }, 32);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
       }
+      rafRef.current = requestAnimationFrame(handleScroll);
     };
 
-    window.addEventListener("scroll", throttledHandleScroll);
+    window.addEventListener("scroll", throttledHandleScroll, { passive: true });
 
     // Cleanup listener on component unmount
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
-      if (timeout) clearTimeout(timeout);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
     };
-  }, []);
+  }, [handleScroll]);
 
   return (
     <div className="bg-[#242424]">
@@ -53,8 +59,12 @@ const HeroSection = () => {
       <Navigation />
 
       <section
-        className="relative h-[90vh] bg-tezzeract-gradient overflow-hidden transition-transform duration-[1500ms] ease-in-out rounded-b-[20px]"
-        style={{ transform: `scale(${scale})`, transformOrigin: "center top" }}
+        ref={sectionRef}
+        className="relative h-[90vh] bg-tezzeract-gradient overflow-hidden rounded-b-[20px]"
+        style={{ 
+          transformOrigin: "center top",
+          willChange: "transform"
+        }}
       >
         {/* Background Video */}
         <video
