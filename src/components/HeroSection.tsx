@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "./Navigation";
 import LogoSlider from "./LogoSlider";
@@ -6,55 +6,65 @@ import HeroVideo from "@/assets/Hero Loop V2.webm"; // Assuming you have a video
 
 const HeroSection = () => {
   const [scale, setScale] = useState(1);
+  const rafRef = useRef();
+  const sectionRef = useRef(null);
+
+  const handleScroll = useCallback(() => {
+    const viewportHeight = window.innerHeight;
+    const startScroll = viewportHeight * 0.1; // 10% of viewport height
+    const endScroll = viewportHeight * 0.2; // 20% of viewport height
+    const scrollY = window.scrollY;
+
+    // Calculate scale: 1 at scrollY <= startScroll, 0.95 at scrollY >= endScroll
+    let newScale;
+    if (scrollY <= startScroll) {
+      newScale = 1;
+    } else if (scrollY >= endScroll) {
+      newScale = 0.95;
+    } else {
+      // Linear interpolation between startScroll and endScroll
+      const progress = (scrollY - startScroll) / (endScroll - startScroll);
+      newScale = 1 - progress * 0.05; // 1 to 0.95
+    }
+
+    // Use transform directly instead of React state for better performance
+    if (sectionRef.current) {
+      sectionRef.current.style.transform = `scale(${newScale})`;
+    }
+  }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const viewportHeight = window.innerHeight;
-      const startScroll = viewportHeight * 0.1; // 10% of viewport height
-      const endScroll = viewportHeight * 0.2; // 20% of viewport height
-      const scrollY = window.scrollY;
-
-      // Calculate scale: 1 at scrollY <= startScroll, 0.95 at scrollY >= endScroll
-      if (scrollY <= startScroll) {
-        setScale(1);
-      } else if (scrollY >= endScroll) {
-        setScale(0.95);
-      } else {
-        // Linear interpolation between startScroll and endScroll
-        const progress = (scrollY - startScroll) / (endScroll - startScroll);
-        const newScale = 1 - progress * 0.05; // 1 to 0.95
-        setScale(newScale);
-      }
-    };
-
-    // Throttle scroll events to ~60fps (16ms)
-    let timeout;
+    // Use requestAnimationFrame for smooth animation
     const throttledHandleScroll = () => {
-      if (!timeout) {
-        timeout = setTimeout(() => {
-          handleScroll();
-          timeout = null;
-        }, 32);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
       }
+      rafRef.current = requestAnimationFrame(handleScroll);
     };
 
-    window.addEventListener("scroll", throttledHandleScroll);
+    window.addEventListener("scroll", throttledHandleScroll, { passive: true });
 
     // Cleanup listener on component unmount
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
-      if (timeout) clearTimeout(timeout);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
     };
-  }, []);
+  }, [handleScroll]);
 
   return (
-    <div className="bg-[#242424]">
+    <div className="bg-[#242424] ">
       {/* Background Gradient */}
       <Navigation />
 
       <section
-        className="relative h-[90vh] bg-tezzeract-gradient overflow-hidden transition-transform duration-[1500ms] ease-in-out rounded-b-[20px]"
-        style={{ transform: `scale(${scale})`, transformOrigin: "center top" }}
+        ref={sectionRef}
+        className="relative h-[90vh] sm:h-[90vh] bg-tezzeract-gradient overflow-hidden rounded-b-[20px] "
+        style={{ 
+          transformOrigin: "center top",
+          willChange: "transform"
+        }}
       >
         {/* Background Video */}
         <video
@@ -74,35 +84,36 @@ const HeroSection = () => {
 
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20  left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-20 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float"></div>
           <div
             className="absolute bottom-20 right-10 w-96 h-96 bg-tezzeract-blue/10 rounded-full blur-3xl animate-float"
             style={{ animationDelay: "3s" }}
           ></div>
         </div>
 
-        <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
+        <div className="relative z-10 flex items-center justify-center h-full px-4 sm:px-6">
           <div className="max-w-6xl mx-auto text-center">
             {/* Main Headline */}
-            <h1 className="tezzeracth1">
+            <h1 className="tezzeracth1 text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight sm:leading-normal">
               Save <span className="text-white font-semibold">100+ hours</span> a week with
-              <br />
+              <br className="hidden sm:inline" />
+              <span className="sm:hidden"> </span>
               <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                 AI-Powered Workflow Automations!
               </span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-l font-thin text-white mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-l font-thin text-white mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
               Tezzeract helps businesses unlock efficiency and scale through
               intelligent AI agents, workflow automation, Gen-AI powered
               creatives, and full-stack AI development.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-6 sm:pb-8 px-4 sm:px-0">
               <Button
-                className="bg-gradient-to-r from-white to-[#D8F4FF] hover:bg-gradient-to-tr hover:from-[#00378AB0] hover:to-[#00A9EE] shadow-[0_0px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_-5px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl text-[#005D8A] font-thin hover:text-white text-base transition-all duration-300 px-8 py-6"
+                className="w-[50%] sm:w-auto bg-gradient-to-r from-white to-[#D8F4FF] hover:bg-gradient-to-tr hover:from-[#00378AB0] hover:to-[#00A9EE] shadow-[0_0px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_-5px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl text-[#005D8A] font-thin hover:text-white text-sm sm:text-base transition-all duration-300 px-6 sm:px-8 py-4 sm:py-6 min-h-[48px] active:scale-95"
               >
                 Book a Free Strategy Call
               </Button>

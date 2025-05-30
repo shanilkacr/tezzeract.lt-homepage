@@ -106,11 +106,11 @@ const Strategic = () => {
       </style>
       <section
         ref={sectionRef}
-        className="bg-[#242424] py-20 h-[80vh] flex items-center justify-center relative overflow-hidden"
+        className="bg-[#242424] py-20 h-[70vh] flex items-center justify-center relative overflow-hidden"
         style={{ transition: 'transform 0.1s ease-out, opacity 0.1s ease-out' }}
       >
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 ref={h2Ref} className="tezzeracth3 text-7xl font-light">
+          <h2 ref={h2Ref} className="tezzeracth3 text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light">
             Tezzeract builds smart automation systems that handle routine tasks, freeing your team to focus on growing your business.
           </h2>
         </div>
