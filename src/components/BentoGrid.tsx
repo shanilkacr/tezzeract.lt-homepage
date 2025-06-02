@@ -8,7 +8,7 @@ const BentoLayout = () => {
       className="min-h-screen bg-[#242424] p-6"
       style={{ fontFamily: "Figtree, system-ui, sans-serif" }}
     >
-      <div className="w-[80%] mx-auto">
+      <div className="w-[95%] lg:w-[80%] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="tezzeracth2">Transform Every Part of Your Business</h1>
