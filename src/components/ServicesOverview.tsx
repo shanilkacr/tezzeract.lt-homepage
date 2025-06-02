@@ -1,8 +1,9 @@
 import React from "react";
 import { Bot, Workflow, ArrowRight, Cloud, Sparkles } from "lucide-react";
-import AutomateVideo from "@/assets/Card 1 - V2.webm";
-import GenerativeVideo from "@/assets/Card 4 - V3.webm";
-import DigitalVideo from "@/assets/Card 3 - V3.webm";
+import AutomateVideo from "@/assets/Card 1 - V6.webm";
+import GenerativeVideo from "@/assets/Card 4 - V6.webm";
+import DigitalVideo from "@/assets/Card 3 - V6.webm";
+import AIAgentic from "@/assets/Card 2 - V6.webm";
 
 const ServicesOverview = () => {
   const services = [
@@ -20,7 +21,7 @@ const ServicesOverview = () => {
       description:
         "Deploy intelligent agents that think, learn, and act autonomously. Integrate with your existing stack.",
       gradient: "from-purple-600 to-pink-600",
-      asset: AutomateVideo,
+      asset: AIAgentic,
     },
     {
       tag: "Effortless Connectivity",
@@ -46,9 +47,9 @@ const ServicesOverview = () => {
       id="services"
     >
       {/* Smooth transition overlay */}
-      <div className="absolute  top-0 left-0 right-0 h-12 sm:h-16 lg:h-20 bg-gradient-to-b from-[#242424] to-transparent"></div>
+      <div className="absolute  top-0 left-0 right-0 h-20 sm:h-24 lg:h-28 bg-gradient-to-b from-[#242424] to-transparent"></div>
 
-      <div className=" w-[80%] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" w-[95%] lg:w-[81%] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2 className=" tezzeracth2">
             Smart Solutions, Built for Scale
@@ -64,7 +65,7 @@ const ServicesOverview = () => {
             <div
               key={index}
               className="relative flex flex-col justify-start 
-                min-h-[250px] sm:min-h-[350px] lg:min-h-[400px] 
+                min-h-[250px] sm:min-h-[350px] lg:min-h-[500px] 
                 border-2 border-[#FFFFFF40] rounded-[20px] 
                 p-4 sm:p-6 lg:p-8 
                 hover:shadow-[0_0_44px_0_rgba(13,105,143,0.75)] 

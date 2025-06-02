@@ -5,11 +5,11 @@ import TezzeractTypeface from "@/assets/Tezzeract - Text Logo (Gradient).webp";
 const Footer = () => {
   return (
     <footer
-      className="bg-gradient-to-br from-[#000000] to-[#353535] text-white py-8 sm:py-10 lg:py-12 min-h-[400px] sm:min-h-[450px] relative"
+      className="bg-gradient-to-br from-[#000000] to-[#353535] text-white pt-20 min-h-[50vh] sm:min-h-[50vh] relative"
     >
-      <div className="w-[83%] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-[83%] flex flex-col h-full min-h-[60vh] sm:min-h-[60vh] justify-between mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Content */}
-        <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
+        <div className="flex flex-row  lg:flex-row gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
           {/* Company Info */}
           <div className="space-y-4 w-full lg:w-1/2">
             <div className="flex items-center space-x-3 w-full sm:w-3/4 lg:w-2/3">

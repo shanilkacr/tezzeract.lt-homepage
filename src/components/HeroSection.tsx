@@ -105,15 +105,13 @@ const HeroSection = () => {
 
             {/* Subheadline */}
             <p className="text-sm sm:text-l font-thin text-white mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0">
-              Tezzeract helps businesses unlock efficiency and scale through
-              intelligent AI agents, workflow automation, Gen-AI powered
-              creatives, and full-stack AI development.
+            Tezzeract helps businesses save time, reduce costs, and grow faster with our AI solutions that automate repetitive tasks, create marketing content, and build custom software, so you can focus on what matters most.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-6 sm:pb-8 px-4 sm:px-0">
               <Button
-                className="w-[50%] sm:w-auto bg-gradient-to-r from-white to-[#D8F4FF] hover:bg-gradient-to-tr hover:from-[#00378AB0] hover:to-[#00A9EE] shadow-[0_0px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_-5px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl text-[#005D8A] font-thin hover:text-white text-sm sm:text-base transition-all duration-300 px-6 sm:px-8 py-4 sm:py-6 min-h-[48px] active:scale-95"
+                className="w-[50%] sm:w-auto bg-gradient-to-r from-white to-[#D8F4FF] hover:bg-gradient-to-tr hover:from-[#00378AB0] hover:to-[#00A9EE] shadow-[0_0px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_-5px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl text-[#005D8A] font-thin hover:text-white text-sm sm:text-base transition-all duration-300 px-24 sm:px-8 py-4 sm:py-6 min-h-[48px] active:scale-95"
               >
                 Book a Free Strategy Call
               </Button>

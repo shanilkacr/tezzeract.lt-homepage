@@ -1,8 +1,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import TezzeractBrick from '@/assets/tezzeractbrick.webp';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const GrowthCTA = () => {
+
+  const Navigate = useNavigate();
   return (
     <div
       className="h-[60vh] bg-gradient-to-l from-[#00A9EE] rounded-t-[20px] overflow-hidden to-[#00378A]"
@@ -26,7 +29,7 @@ const GrowthCTA = () => {
         </p>
 
         <div className="flex justify-center sm:justify-start">
-  <Button                 
+  <Button onClick={ () => Navigate('/book-a-call') }            
     className="bg-gradient-to-r mt-5 from-white to-[#D8F4FF] hover:bg-gradient-to-tr hover:from-[#00378AB0] hover:to-[#00A9EE] shadow-[0_0px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_-5px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl text-[#005D8A] font-thin hover:text-white text-base transition-all duration-300 px-8 py-6"               
   >                 
     Book a Free Strategy Call               
