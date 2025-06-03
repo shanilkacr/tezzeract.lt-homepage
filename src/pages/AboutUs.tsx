@@ -116,38 +116,55 @@ const AboutUsHero = () => {
           </div>
         </section>
         {/* Statistics Section */}
-        <section className="max-w-6xl mx-auto py-1">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl self-center
- p-12 text-center border border-white/10">
-              <div className="text-center">
-                <h1 className="tezzeracth2 text-7xl">15+</h1>
+        <div
+          className="bg-gradient-to-br from-[#00A9EE] to-[#00378A] py-[5%]
+-"
+        >
+          <section className="max-w-6xl mx-auto py-1 ">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div
+                className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl self-center
+ p-12 text-center border border-white/10"
+              >
+                <div className="text-center">
+                  <h1 className="tezzeracth2 text-7xl">15+</h1>
+                </div>
+                <div className="tezzeracth2 text-2xl tracking-normal">
+                  countries
+                </div>
               </div>
-              <div className="tezzeracth2 text-2xl tracking-normal">countries</div>
-            </div>
-            <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl p-12 self-center
- text-center border border-white/10">
-              <div className="tezzeracth2 text-7xl">60+</div>
-              <div className="tezzeracth2 text-2xl tracking-normal">clients</div>
-            </div>
-            <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
- rounded-2xl p-12 text-center border border-white/10">
-              <div className="tezzeracth2 text-7xl">20+</div>
-              <div className="tezzeracth2 text-2xl tracking-normal">
-                industries
+              <div
+                className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl p-12 self-center
+ text-center border border-white/10"
+              >
+                <div className="tezzeracth2 text-7xl">60+</div>
+                <div className="tezzeracth2 text-2xl tracking-normal">
+                  clients
+                </div>
+              </div>
+              <div
+                className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
+ rounded-2xl p-12 text-center border border-white/10"
+              >
+                <div className="tezzeracth2 text-7xl">20+</div>
+                <div className="tezzeracth2 text-2xl tracking-normal">
+                  industries
+                </div>
+              </div>
+              <div
+                className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
+rounded-2xl p-8 text-center border border-white/10"
+              >
+                <div className="tezzeracth2 text-7xl">150</div>
+                <div className="tezzeracth2 text-2xl tracking-normal">
+                  successful
+                  <br />
+                  projects
+                </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
-rounded-2xl p-8 text-center border border-white/10">
-              <div className="tezzeracth2 text-7xl">150</div>
-              <div className="tezzeracth2 text-2xl tracking-normal">
-                successful
-                <br />
-                projects
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
         {/* Values Section */}
 
@@ -166,11 +183,8 @@ rounded-2xl p-8 text-center border border-white/10">
             </Button>
           </div>
         </section>
-
       </div>
-
     </div>
-    
   );
 };
 
