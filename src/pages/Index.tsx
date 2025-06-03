@@ -14,6 +14,7 @@ import { ContactSection } from '@/components/Contact';
 const Index = () => {
   return (
     <div className="min-h-screen">
+      
       <HeroSection />
       <Strategic />
   
