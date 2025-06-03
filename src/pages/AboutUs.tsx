@@ -55,14 +55,14 @@ const AboutUsHero = () => {
     <div className="bg-[#242424]">
       {/* Navigation */}
       <Navigation />
-      
+
       {/* Hero Section with Scroll Animation */}
       <section
         ref={sectionRef}
         className="relative h-[90vh] sm:h-[90vh] bg-gradient-to-br from-tezzeract-blue/20 via-transparent to-tezzeract-darkblue/30 overflow-hidden rounded-b-[20px]"
-        style={{ 
+        style={{
           transformOrigin: "center top",
-          willChange: "transform"
+          willChange: "transform",
         }}
       >
         {/* Gradient Mesh Background Overlay */}
@@ -81,11 +81,15 @@ const AboutUsHero = () => {
           <div className="max-w-6xl mx-auto text-center">
             {/* Main Headline */}
             <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light leading-tight sm:leading-normal text-white mb-6">
-              We're <span className="text-white font-semibold"><br/>Tezzeract</span>
+              We're{" "}
+              <span className="text-white font-semibold">
+                <br />
+                Tezzeract
+              </span>
               <br className="hidden sm:inline" />
               <span className="sm:hidden"> </span>
             </h1>
-            
+
             {/* Subheadline */}
             <p className="text-lg sm:text-xl font-light text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
               Your AI-powered partner in business transformation
@@ -99,56 +103,74 @@ const AboutUsHero = () => {
         {/* Our Story Section */}
         <section className="max-w-6xl mx-auto py-20">
           <div className="text-center mb-16">
-            <h1 className="tezzeracth2">Get access to a pool of vetted professionals specialized in tech, growth, creatives and more!</h1>
+            <h1 className="tezzeracth2">
+              Get access to a pool of vetted professionals specialized in tech,
+              growth, creatives and more!
+            </h1>
             <p className="text-white text-sm sm:text-base lg:text-lg max-w-3xl font-light mx-auto mt-2 sm:mt-4">
-We'll take care of the talent Effortlessly build and manage a remote team of highly skilled professionals, carefully matched to your project needs. From recruitment to collaboration, we handle the details so you can focus on growing your business.            </p>
+              We'll take care of the talent Effortlessly build and manage a
+              remote team of highly skilled professionals, carefully matched to
+              your project needs. From recruitment to collaboration, we handle
+              the details so you can focus on growing your business.{" "}
+            </p>
           </div>
-          
-         
         </section>
         {/* Statistics Section */}
-        <section className="max-w-6xl mx-auto py-20">
+        <section className="max-w-6xl mx-auto py-1">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-[#a1e4ff] to-white backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
-              <div className="tezzeracth2">15+</div>
-              <div className="text-black text-xl font-medium">countries</div>
+            <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl self-center
+ p-12 text-center border border-white/10">
+              <div className="text-center">
+                <h1 className="tezzeracth2 text-7xl">15+</h1>
+              </div>
+              <div className="tezzeracth2 text-2xl tracking-normal">countries</div>
             </div>
-            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
-              <div className="text-4xl md:text-5xl font-bold text-[#00A9EE] mb-2">60+</div>
-              <div className="text-white/70 text-sm font-medium">clients</div>
+            <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl p-12 self-center
+ text-center border border-white/10">
+              <div className="tezzeracth2 text-7xl">60+</div>
+              <div className="tezzeracth2 text-2xl tracking-normal">clients</div>
             </div>
-            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
-              <div className="text-4xl md:text-5xl font-bold text-[#00A9EE] mb-2">20+</div>
-              <div className="text-white/70 text-sm font-medium">industries</div>
+            <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
+ rounded-2xl p-12 text-center border border-white/10">
+              <div className="tezzeracth2 text-7xl">20+</div>
+              <div className="tezzeracth2 text-2xl tracking-normal">
+                industries
+              </div>
             </div>
-            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
-              <div className="text-4xl md:text-5xl font-bold text-[#00A9EE] mb-2">150</div>
-              <div className="text-white/70 text-sm font-medium">successful<br/>projects</div>
+            <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
+rounded-2xl p-8 text-center border border-white/10">
+              <div className="tezzeracth2 text-7xl">150</div>
+              <div className="tezzeracth2 text-2xl tracking-normal">
+                successful
+                <br />
+                projects
+              </div>
             </div>
           </div>
-        </section>  
-
-        
-
-       
+        </section>
 
         {/* Values Section */}
-        
 
         {/* CTA Section */}
         <section className="max-w-4xl mx-auto py-20 text-center">
           <div className="bg-gradient-to-br from-[#00378A]/20 to-[#00A9EE]/20 rounded-3xl p-12 border border-white/10">
-            <h2 className="text-3xl sm:text-4xl font-light text-white mb-6">Ready to Transform Your Business?</h2>
+            <h2 className="text-3xl sm:text-4xl font-light text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
             <p className="text-xl text-white/80 mb-8 leading-relaxed">
-              Join hundreds of businesses that have already saved thousands of hours with our AI solutions.
+              Join hundreds of businesses that have already saved thousands of
+              hours with our AI solutions.
             </p>
             <Button className="bg-gradient-to-r from-white to-[#D8F4FF] hover:bg-gradient-to-tr hover:from-[#00378AB0] hover:to-[#00A9EE] shadow-[0_0px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_-5px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl text-[#005D8A] font-medium hover:text-white text-lg transition-all duration-300 px-8 py-6 active:scale-95">
               Start Your Transformation Today
             </Button>
           </div>
         </section>
+
       </div>
+
     </div>
+    
   );
 };
 
