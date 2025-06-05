@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
+import TezzeractWhiteLogo from "@/assets/Tezzeract - Text Logo (White).webp";
 
 const AboutUsHero = () => {
   const [scale, setScale] = useState(1);
@@ -59,7 +60,7 @@ const AboutUsHero = () => {
       {/* Hero Section with Scroll Animation */}
       <section
         ref={sectionRef}
-        className="relative h-[90vh] sm:h-[90vh] bg-gradient-to-br from-tezzeract-blue/20 via-transparent to-tezzeract-darkblue/30 overflow-hidden rounded-b-[20px]"
+        className="relative h-[60vh] sm:h-[60vh] bg-gradient-to-br from-tezzeract-blue/20 via-transparent to-tezzeract-darkblue/30 overflow-hidden rounded-b-[20px]"
         style={{
           transformOrigin: "center top",
           willChange: "transform",
@@ -78,15 +79,16 @@ const AboutUsHero = () => {
         </div>
 
         <div className="relative z-10 flex items-center justify-center h-full px-4 sm:px-6">
-          <div className="max-w-6xl mx-auto text-center">
+          <div className="max-w-6xl mx-auto text-center flex flex-col items-center justify-center">
             {/* Main Headline */}
             <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light leading-tight sm:leading-normal text-white mb-6">
               We're{" "}
-              <span className="text-white font-semibold">
-                <br />
-                Tezzeract
-              </span>
-              <br className="hidden sm:inline" />
+              <img
+                src={TezzeractWhiteLogo}
+                alt="Tezzeract Object"
+                className="w-[40%] mx-auto pt-4"
+              />
+          
               <span className="sm:hidden"> </span>
             </h1>
 
