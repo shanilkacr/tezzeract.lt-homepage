@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import TezzeractWhiteLogo from "@/assets/Tezzeract - Text Logo (White).webp";
 import { Globe } from "@/components/world-map";
+import { Particles } from "@/components/Particle";
 
 const AboutUsHero = () => {
   const [scale, setScale] = useState(1);
@@ -196,11 +197,11 @@ rounded-2xl p-8 text-center border border-white/10"
                   <span className="text-white font-bold text-lg">1</span>
                 </div>
                 <h3 className="text-xl font-medium text-white mb-3">
-                  Real-time analytics
+                  Collaboration Over Control
                 </h3>
                 <p className="text-white/70 leading-relaxed text-sm">
-                  Data-driven business insights with real-time predictive
-                  analytics backed with extensive training.
+                We don’t replace people, we empower them. Our AI tools are made to partner with humans, not overpower them.
+
                 </p>
               </div>
 
@@ -210,11 +211,10 @@ rounded-2xl p-8 text-center border border-white/10"
                   <span className="text-white font-bold text-lg">2</span>
                 </div>
                 <h3 className="text-xl font-medium text-white mb-3">
-                  Streamlined workflows
-                </h3>
+Transparency                </h3>
                 <p className="text-white/70 leading-relaxed text-sm">
-                  Improve productivity with automated business processes with
-                  streamlined workflow and real-time collaboration.
+              We communicate openly—about what our AI can do, what it can't, and how it makes decisions.
+
                 </p>
               </div>
             </div>
@@ -263,11 +263,10 @@ rounded-2xl p-8 text-center border border-white/10"
                   <span className="text-white font-bold text-lg">4</span>
                 </div>
                 <h3 className="text-xl font-medium text-white mb-3">
-                  Mobile accessibility
-                </h3>
+Real-World impact                </h3>
                 <p className="text-white/70 leading-relaxed text-sm">
-                  Manage your business on the go with our mobile accessibility
-                  for maximum flexibility and round-the-clock access.
+                 We build tech that actually works where it matters—solving real problems, not just demo-stage hype.
+
                 </p>
               </div>
 
@@ -277,12 +276,9 @@ rounded-2xl p-8 text-center border border-white/10"
                   <span className="text-white font-bold text-lg">5</span>
                 </div>
                 <h3 className="text-xl font-medium text-white mb-3">
-                  24/7 expert support
-                </h3>
+Relentless Innovation                </h3>
                 <p className="text-white/70 leading-relaxed text-sm">
-                  Get round-the-clock support from our expert technical business
-                  data with real-time system that can help you succeed
-                  efficiently.
+                 We move fast, adapt faster, and never settle. AI is evolving—and so are we, always pushing the edge.
                 </p>
               </div>
 
