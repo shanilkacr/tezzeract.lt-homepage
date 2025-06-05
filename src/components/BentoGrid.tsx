@@ -1,6 +1,8 @@
 import React from "react";
 import Logo from "@/assets/Tezzeract - Symbolic Logo (Gradient).webp";
 import { DollarSign, Clock, TrendingUp, Package, Target } from "lucide-react";
+import { NumberTicker } from "@/components/NumberTicker";
+
 
 const BentoLayout = () => {
   return (
@@ -45,7 +47,7 @@ const BentoLayout = () => {
               </h3>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 mb-3 sm:mb-4">
                 <div className="text-4xl sm:text-5xl lg:text-6xl font-light">
-                  80%
+<NumberTicker value={80} />%
                 </div>
                 <div className="text-lg sm:text-xl lg:text-2xl leading-tight text-blue-100 font-light">
                   reduction in customer service costs
