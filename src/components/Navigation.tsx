@@ -11,22 +11,17 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div>
-          <img src="/logowhite.webp" alt="Tezzeract Logo" className="h-6" />
+          <Link to="/">
+            <img src="/logowhite.webp" alt="Tezzeract Logo" className="h-6" />
+          </Link>
         </div>
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <a
-            href="#services"
+        <Link
+            to="/"
             className="text-white/90 hover:text-white transition-colors"
-            onClick={(e) => {
-              e.preventDefault();
-              document
-                .querySelector("#services")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
           >
-            Services
-          </a>
+       Home </Link>
           <a
             href="#solutions"
             className="text-white/90 hover:text-white transition-colors"
@@ -46,18 +41,12 @@ const Navigation = () => {
             About
           </Link>
 
-          <a
-            href="#contact"
+          <Link
+            to="/Contact"
             className="text-white/90 hover:text-white transition-colors"
-            onClick={(e) => {
-              e.preventDefault();
-              document
-                .querySelector("#contact")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
           >
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* Desktop CTA */}
