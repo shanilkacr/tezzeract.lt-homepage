@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import TezzeractWhiteLogo from "@/assets/Tezzeract - Text Logo (White).webp";
 import { Globe } from "@/components/world-map";
-import { Particles } from "@/components/Particle";
+import { Ripple} from "@/components/Ripple";
 
 const AboutUsHero = () => {
   const [scale, setScale] = useState(1);
@@ -193,92 +193,76 @@ rounded-2xl p-8 text-center border border-white/10"
             <div className="space-y-6">
               {/* Feature 1 */}
               <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#00A9EE] to-[#00378A] rounded-xl flex items-center justify-center mb-4">
-                  <span className="text-white font-bold text-lg">1</span>
-                </div>
+                <img
+                  src="src/assets/Collaboration Over Control.png"
+                  alt="Step 1"
+                  className="w-16 h-16 object-contain"
+                />
                 <h3 className="text-xl font-medium text-white mb-3">
                   Collaboration Over Control
                 </h3>
                 <p className="text-white/70 leading-relaxed text-sm">
-                We don’t replace people, we empower them. Our AI tools are made to partner with humans, not overpower them.
-
+                  We don’t replace people, we empower them. Our AI tools are
+                  made to partner with humans, not overpower them.
                 </p>
               </div>
 
               {/* Feature 2 */}
               <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#00A9EE] to-[#00378A] rounded-xl flex items-center justify-center mb-4">
-                  <span className="text-white font-bold text-lg">2</span>
-                </div>
+                <img
+                  src="src/assets/Transparency.png"
+                  alt="Step 2"
+                  className="w-16 h-16 object-contain"
+                />
                 <h3 className="text-xl font-medium text-white mb-3">
-Transparency                </h3>
+                  Transparency{" "}
+                </h3>
                 <p className="text-white/70 leading-relaxed text-sm">
-              We communicate openly—about what our AI can do, what it can't, and how it makes decisions.
-
+                  We communicate openly—about what our AI can do, what it can't,
+                  and how it makes decisions.
                 </p>
               </div>
             </div>
 
             {/* Center - Professional Image */}
             <div className="flex justify-center items-center">
-              <div className="relative">
-                <div className="w-100 h-[450px] bg-gradient-to-br from-white/10 to-white/5 rounded-3xl border border-white/20 backdrop-blur-sm flex items-center justify-center overflow-hidden">
-                  {/* Professional woman working on laptop */}
-                  <div className=" inset-0 bg-gradient-to-br from-[#00A9EE]/20 to-[#00378A]/20"></div>
-                  <div className="relative z-10 flex flex-col items-center justify-center h-full p-8">
-                    <div className="w-32 h-32 bg-gradient-to-br from-[#00A9EE] to-[#00378A] rounded-full mb-6 flex items-center justify-center">
-                      <svg
-                        className="w-16 h-16 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                        />
-                      </svg>
-                    </div>
-                    <div className="text-center">
-                      <h4 className="text-white font-medium text-lg mb-2">
-                        Professional Excellence
-                      </h4>
-                      <p className="text-white/70 text-sm leading-relaxed">
-                        Dedicated professionals working with cutting-edge
-                        technology to deliver exceptional results
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
+                <div className="relative h-[500px] w-full overflow-hidden">
+  <Ripple />
+</div>
             </div>
 
             {/* Right side - Features */}
             <div className="space-y-6">
               {/* Feature 4 */}
               <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#00A9EE] to-[#00378A] rounded-xl flex items-center justify-center mb-4">
-                  <span className="text-white font-bold text-lg">4</span>
-                </div>
+                <img
+                  src="src/assets/Real-World Impact.png"
+                  alt="Step 3"
+                  className="w-16 h-16 object-contain"
+                />
                 <h3 className="text-xl font-medium text-white mb-3">
-Real-World impact                </h3>
+                  Real-World impact{" "}
+                </h3>
                 <p className="text-white/70 leading-relaxed text-sm">
-                 We build tech that actually works where it matters—solving real problems, not just demo-stage hype.
-
+                  We build tech that actually works where it matters—solving
+                  real problems, not just demo-stage hype.
                 </p>
               </div>
 
               {/* Feature 5 */}
               <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#00A9EE] to-[#00378A] rounded-xl flex items-center justify-center mb-4">
-                  <span className="text-white font-bold text-lg">5</span>
-                </div>
+                <img
+                  src="src/assets/Relentless Innovation.png"
+                  alt="Step 4"
+                  className="w-16 h-16 object-contain"
+                />
                 <h3 className="text-xl font-medium text-white mb-3">
-Relentless Innovation                </h3>
+                  Relentless Innovation{" "}
+                </h3>
                 <p className="text-white/70 leading-relaxed text-sm">
-                 We move fast, adapt faster, and never settle. AI is evolving—and so are we, always pushing the edge.
+                  We move fast, adapt faster, and never settle. AI is
+                  evolving—and so are we, always pushing the edge.
                 </p>
               </div>
 
@@ -300,6 +284,7 @@ Relentless Innovation                </h3>
               Start Your Transformation Today
             </Button>
           </div>
+          
         </section>
       </div>
     </div>

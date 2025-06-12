@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "@/assets/Tezzeract - Symbolic Logo (Gradient).webp";
 import { DollarSign, Clock, TrendingUp, Package, Target } from "lucide-react";
 import { NumberTicker } from "@/components/NumberTicker";
+import { Ripple } from "@/components/Ripple";
 
 
 const BentoLayout = () => {

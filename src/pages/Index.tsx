@@ -19,6 +19,7 @@ const Index = () => {
       <Strategic />
   
       <ServicesOverview />
+      
       <BentoGrid />
       <ContactSection />
 
