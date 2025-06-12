@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import TezzeractWhiteLogo from "@/assets/Tezzeract - Text Logo (White).webp";
 import { Globe } from "@/components/world-map";
 import { Ripple} from "@/components/Ripple";
+import Footer from '@/components/Footer';
 
 const AboutUsHero = () => {
   const [scale, setScale] = useState(1);
@@ -287,6 +288,8 @@ rounded-2xl p-8 text-center border border-white/10"
           
         </section>
       </div>
+          <Footer />
+
     </div>
   );
 };
