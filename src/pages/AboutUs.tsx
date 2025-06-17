@@ -6,7 +6,7 @@ import { Globe } from "@/components/world-map";
 import { Ripple } from "@/components/Ripple";
 import Footer from "@/components/Footer";
 import { IconCloudDemo } from "@/components/IconCloudImages";
-import { AnimatedList } from "@/components/AnimatedList";
+import { AnimatedListDemo } from "@/components/AnimatedListDemo";
 
 const AboutUsHero = () => {
   const [scale, setScale] = useState(1);
@@ -165,16 +165,12 @@ const AboutUsHero = () => {
                   <br />
                   projects
                 </div>
-                
+<AnimatedListDemo/>
               </div>
             </div>
           </section>
         </div>
-<AnimatedList>
-  <p>Item 1</p>
-  <p>Item 2</p>
-  <p>Item 3</p>
-</AnimatedList>
+
         {/* Values Section */}
         <section className="max-w-7xl mx-auto py-20">
           <div className="text-center mb-16">
