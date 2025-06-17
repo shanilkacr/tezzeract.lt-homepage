@@ -44,7 +44,6 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-  
 
   .dark {
     --background: 222.2 84% 4.9%;
@@ -75,9 +74,10 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+  .theme {
+    --animate-ripple: ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite;
+  }
 }
-
-
 
 @layer base {
   * {
@@ -116,16 +116,14 @@
   }
   .tezzeracth3 {
     @apply text-7xl md:text-7xl font-thin text-gradient3 mb-6 tracking-[-2.1px];
-    
+
   }
   .buttonWhite {
     @apply w-[50%] sm:w-auto bg-gradient-to-r from-white to-[#D8F4FF] hover:bg-gradient-to-tr hover:from-[#00378AB0] hover:to-[#00A9EE] shadow-[0_0px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_-5px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl text-[#005D8A] font-thin hover:text-white text-sm sm:text-base transition-all duration-300 px-24 sm:px-8 py-4 sm:py-6 min-h-[48px] active:scale-95
-    
+
   }
 
 }
-
-
 
 @layer utilities {
   .text-gradient {
@@ -134,16 +132,51 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .typewriter {
     overflow: hidden;
     border-right: 2px solid #00A9EE;
     white-space: nowrap;
     animation: typewriter 3s steps(50) 1s forwards, blink 1s infinite step-end;
   }
-  
+
   @keyframes blink {
     0%, 50% { border-color: #00A9EE; }
     51%, 100% { border-color: transparent; }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@theme inline {
+  @keyframes ripple {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+  50% {
+    transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
+}
+
+@theme inline {
+  --animate-ripple: ripple var(--duration, 2s) ease calc(var(--i, 0) * 0.2s)
+    infinite;
+ 
+  @keyframes ripple {
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(0.9);
+    }
   }
 }

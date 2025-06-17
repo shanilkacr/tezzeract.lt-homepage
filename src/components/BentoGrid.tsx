@@ -1,6 +1,9 @@
 import React from "react";
 import Logo from "@/assets/Tezzeract - Symbolic Logo (Gradient).webp";
 import { DollarSign, Clock, TrendingUp, Package, Target } from "lucide-react";
+import { NumberTicker } from "@/components/NumberTicker";
+import { Ripple } from "@/components/Ripple";
+import AnimatedLogo from "@/assets/animated_logo.webm";
 
 const BentoLayout = () => {
   return (
@@ -11,7 +14,7 @@ const BentoLayout = () => {
       <div className="w-[95%] lg:w-[80%] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="tezzeracth2">Transform Every Part of Your Business</h1>
+          <h2 className="tezzeracth2">Transform Every Part of Your Business</h2>
           <p className="text-white text-sm sm:text-base lg:text-lg max-w-3xl font-light mx-auto mt-2 sm:mt-4">
             Real results from AI implementation across industries. See how
             businesses like yours are achieving measurable improvements.
@@ -45,7 +48,7 @@ const BentoLayout = () => {
               </h3>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 mb-3 sm:mb-4">
                 <div className="text-4xl sm:text-5xl lg:text-6xl font-light">
-                  80%
+                  <NumberTicker value={80} />%
                 </div>
                 <div className="text-lg sm:text-xl lg:text-2xl leading-tight text-blue-100 font-light">
                   reduction in customer service costs
@@ -127,11 +130,15 @@ const BentoLayout = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-10 md:col-span-2 flex items-center justify-center custom-logo">
-            <img
-              src={Logo}
-              alt="Tezzeract Logo"
-              className="max-w-[150px] max-h-[150px] object-contain"
+          <div className="col-span-10 md:col-span-2 custom-logo  relative overflow-hidden">
+            <video
+              src={AnimatedLogo}
+              preload="auto"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute top-0 left-0 w-full h-full object-cover"
             />
           </div>
           <div

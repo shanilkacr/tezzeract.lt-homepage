@@ -2,6 +2,12 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import TezzeractWhiteLogo from "@/assets/Tezzeract - Text Logo (White).webp";
+import { Globe } from "@/components/world-map";
+import { Ripple } from "@/components/Ripple";
+import Footer from "@/components/Footer";
+import { IconCloudDemo } from "@/components/IconCloudImages";
+
+import { AnimatedBeamDemo } from "@/components/AnimatedUniBeam";
 
 const AboutUsHero = () => {
   const [scale, setScale] = useState(1);
@@ -40,7 +46,6 @@ const AboutUsHero = () => {
       }
       rafRef.current = requestAnimationFrame(handleScroll);
     };
-
     window.addEventListener("scroll", throttledHandleScroll, { passive: true });
 
     // Cleanup listener on component unmount
@@ -51,12 +56,10 @@ const AboutUsHero = () => {
       }
     };
   }, [handleScroll]);
-
   return (
     <div className="bg-[#242424]">
       {/* Navigation */}
       <Navigation />
-
       {/* Hero Section with Scroll Animation */}
       <section
         ref={sectionRef}
@@ -68,7 +71,6 @@ const AboutUsHero = () => {
       >
         {/* Gradient Mesh Background Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#00378A] to-[#00A9EE]"></div>
-
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
@@ -77,7 +79,6 @@ const AboutUsHero = () => {
             style={{ animationDelay: "2s" }}
           ></div>
         </div>
-
         <div className="relative z-10 flex items-center justify-center h-full px-4 sm:px-6">
           <div className="max-w-6xl mx-auto text-center flex flex-col items-center justify-center">
             {/* Main Headline */}
@@ -88,7 +89,6 @@ const AboutUsHero = () => {
                 alt="Tezzeract Object"
                 className="w-[40%] mx-auto pt-4"
               />
-          
               <span className="sm:hidden"> </span>
             </h1>
 
@@ -125,17 +125,6 @@ const AboutUsHero = () => {
           <section className="max-w-6xl mx-auto py-1 ">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div
-                className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl self-center
- p-12 text-center border border-white/10"
-              >
-                <div className="text-center">
-                  <h1 className="tezzeracth2 text-7xl">15+</h1>
-                </div>
-                <div className="tezzeracth2 text-2xl tracking-normal">
-                  countries
-                </div>
-              </div>
-              <div
                 className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl p-12 self-center
  text-center border border-white/10"
               >
@@ -143,20 +132,35 @@ const AboutUsHero = () => {
                 <div className="tezzeracth2 text-2xl tracking-normal">
                   clients
                 </div>
+                 <div className=" ">
+                  <IconCloudDemo />
+                </div>
               </div>
+
               <div
                 className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
  rounded-2xl p-12 text-center border border-white/10"
               >
+               
                 <div className="tezzeracth2 text-7xl">20+</div>
                 <div className="tezzeracth2 text-2xl tracking-normal">
                   industries
                 </div>
               </div>
               <div
-                className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
-rounded-2xl p-8 text-center border border-white/10"
+                className="relative flex flex-col
+               size-full overflow-hidden rounded-lg border bg-gradient-to-br from-[rgb(142,185,255)] to-white  pt-8"
               >
+                <div className="flex flex-col items-center">
+                  <h1 className="tezzeracth2 text-6xl">15+</h1>
+                  <div className="tezzeracth2 text-xl tracking-normal mt-[-30px]">
+                    countries
+                  </div>
+                </div>
+                <Globe className="top-[100px]" />
+                <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+              </div>
+              <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center rounded-2xl p-8 text-center border border-white/10">
                 <div className="tezzeracth2 text-7xl">150</div>
                 <div className="tezzeracth2 text-2xl tracking-normal">
                   successful
@@ -169,7 +173,95 @@ rounded-2xl p-8 text-center border border-white/10"
         </div>
 
         {/* Values Section */}
-
+        <section className="max-w-7xl mx-auto py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-light text-white mb-4">
+              Core features that set us
+            </h2>
+            <h2 className="text-4xl sm:text-5xl font-light text-white mb-6">
+              apart from the competition
+            </h2>
+            <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
+              Discover our competitive advantages that deliver extraordinary
+              results and exceptional value, while operating at twice the
+              competition.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            {/* Left side - Features */}
+            <div className="space-y-6">
+              {/* Feature 1 */}
+              <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
+                <img
+                  src="src/assets/Collaboration Over Control.png"
+                  alt="Step 1"
+                  className="w-16 h-16 object-contain"
+                />
+                <h3 className="text-xl font-medium text-white mb-3">
+                  Collaboration Over Control
+                </h3>
+                <p className="text-white/70 leading-relaxed text-sm">
+                  We don’t replace people, we empower them. Our AI tools are
+                  made to partner with humans, not overpower them.
+                </p>
+              </div>
+              {/* Feature 2 */}
+              <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
+                <img
+                  src="src/assets/Transparency.png"
+                  alt="Step 2"
+                  className="w-16 h-16 object-contain"
+                />
+                <h3 className="text-xl font-medium text-white mb-3">
+                  Transparency{" "}
+                </h3>
+                <p className="text-white/70 leading-relaxed text-sm">
+                  We communicate openly—about what our AI can do, what it can't,
+                  and how it makes decisions.
+                </p>
+              </div>
+            </div>
+            {/* Center - Professional Image */}
+            <div className="flex justify-center items-center">
+              <div className="relative h-[500px] w-full overflow-hidden">
+                <Ripple />
+              </div>
+            </div>
+            {/* Right side - Features */}
+            <div className="space-y-6">
+              {/* Feature 4 */}
+              <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
+                <img
+                  src="src/assets/Real-World Impact.png"
+                  alt="Step 3"
+                  className="w-16 h-16 object-contain"
+                />
+                <h3 className="text-xl font-medium text-white mb-3">
+                  Real-World impact{" "}
+                </h3>
+                <p className="text-white/70 leading-relaxed text-sm">
+                  We build tech that actually works where it matters—solving
+                  real problems, not just demo-stage hype.
+                </p>
+              </div>
+              {/* Feature 5 */}
+              <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
+                <img
+                  src="src/assets/Relentless Innovation.png"
+                  alt="Step 4"
+                  className="w-16 h-16 object-contain"
+                />
+                <h3 className="text-xl font-medium text-white mb-3">
+                  Relentless Innovation{" "}
+                </h3>
+                <p className="text-white/70 leading-relaxed text-sm">
+                  We move fast, adapt faster, and never settle. AI is
+                  evolving—and so are we, always pushing the edge.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* CTA Section */}
         <section className="max-w-4xl mx-auto py-20 text-center">
           <div className="bg-gradient-to-br from-[#00378A]/20 to-[#00A9EE]/20 rounded-3xl p-12 border border-white/10">
@@ -186,6 +278,7 @@ rounded-2xl p-8 text-center border border-white/10"
           </div>
         </section>
       </div>
+      <Footer />
     </div>
   );
 };

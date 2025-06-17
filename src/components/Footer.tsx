@@ -1,6 +1,9 @@
 import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import TezzeractTypeface from "@/assets/Tezzeract - Text Logo (Gradient).webp";
+import TezzeractPP from "@/assets/Tezzeract-Profile-Photo.webp"
+import whiteLogo from "@/assets/Tezzeract - Symbolic Logo (Light).webp"
+
 
 const Footer = () => {
   return (
@@ -9,13 +12,17 @@ const Footer = () => {
     >
       <div className="w-[83%] flex flex-col h-full min-h-[60vh] sm:min-h-[60vh] justify-between mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Content */}
-        <div className="flex flex-row  lg:flex-row gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
+        <div className="flex flex-col  lg:flex-row sm:flex-row gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
           {/* Company Info */}
           <div className="space-y-4 w-full lg:w-1/2">
-            <div className="flex items-center space-x-3 w-full sm:w-3/4 lg:w-2/3">
-              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                <div className="w-6 sm:w-8 h-6 sm:h-8 border-2 border-white rounded"></div>
-              </div>
+            <div className="flex items-center space-x-6 w-full sm:w-3/4 lg:w-2/3">
+             
+                <img
+                  src={whiteLogo}
+                  alt="Tezzeract Logo"
+                  className="w-8 sm:w-10 h-8 sm:h-10 object-contain"
+                />
+      
               <div>
                 <p className="text-xs sm:text-sm text-gray-300 font-thin">
                   Tezzeract (Pvt) Ltd specializing in digital scalability,
@@ -26,14 +33,18 @@ const Footer = () => {
             </div>
 
             <div className="space-y-3 text-xs sm:text-sm text-gray-300 font-thin">
-              <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                <span>+1 346 999 8698</span>
-              </div>
-              <div className="flex items-center space-x-3">
+                <a href="tel:+13469998698" className="hover:text-white transition-colors">
+                  +1 346 999 8698
+                </a>
+                </div>
+                <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                <span>info@tezzeract.net</span>
-              </div>
+                <a href="mailto:info@tezzeract.net" className="hover:text-white transition-colors">
+                  info@tezzeract.net
+                </a>
+                </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
                 <span>
@@ -75,22 +86,27 @@ const Footer = () => {
             <h3 className="text-xl sm:text-2xl font-light mb-3 sm:mb-4">Socials</h3>
             <ul className="space-y-2 text-gray-300 font-thin text-xs sm:text-sm">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="https://www.instagram.com/tezzeractofficial/" target="_blank" 
+    rel="noopener noreferrer" 
+                className="hover:text-white transition-colors">
                   Instagram
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/company/tezzeractofficial/" target="_blank" 
+    rel="noopener noreferrer" className="hover:text-white transition-colors">
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="https://www.facebook.com/TezzeractOfficial" target="_blank" 
+    rel="noopener noreferrer" className="hover:text-white transition-colors">
                   Facebook
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="https://x.com/TezzeractTeams"  target="_blank" 
+    rel="noopener noreferrer" className="hover:text-white transition-colors">
                   X.com
                 </a>
               </li>
