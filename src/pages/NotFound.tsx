@@ -15,7 +15,7 @@ const NotFound = () => {
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">
         <h1 className="tezzeracth2">404</h1>
-        <p className="text-white text-lg sm:text-base lg:text-lg max-w-3xl mx-auto mt-2 pb-2 sm:mt-4">Oops! Page not found</p>
+        <p className="text-white text-sm sm:text-base lg:text-lg max-w-3xl mx-auto mt-2 pb-2 sm:mt-4">Oops! Page not found</p>
         <a href="/" className="text-blue-500 hover:text-blue-700 ">
           Return to Home
         </a>
