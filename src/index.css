@@ -102,7 +102,16 @@
     @apply bg-clip-text text-transparent;
     background-image: radial-gradient(ellipse at bottom right, #1962cf, #00A9EE);
   }
-
+  .tezzeractp5 {
+    @apply text-xl tracking-normal font-thin text-gradient ;
+    -webkit-text-stroke: 1px #0066FF52; /* Text stroke for WebKit browsers */
+    text-stroke: 1px #0066FF52; /* Standard property (limited support) */
+  }
+.tezzeracth5 {
+    @apply text-6xl font-thin text-gradient;
+    -webkit-text-stroke: 1px #0066FF52; /* Text stroke for WebKit browsers */
+    text-stroke: 1px #0066FF52; /* Standard property (limited support) */
+  }
   .tezzeracth2 {
     @apply text-4xl md:text-6xl font-thin text-gradient mb-6 tracking-[-2.1px];
     -webkit-text-stroke: 1px #0066FF52; /* Text stroke for WebKit browsers */

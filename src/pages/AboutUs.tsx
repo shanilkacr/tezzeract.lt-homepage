@@ -105,10 +105,10 @@ const AboutUsHero = () => {
         {/* Our Story Section */}
         <section className="max-w-6xl mx-auto py-20">
           <div className="text-center mb-16">
-            <h1 className="tezzeracth2">
+            <h2 className="tezzeracth2">
               Get access to a pool of vetted professionals specialized in tech,
               growth, creatives and more!
-            </h1>
+            </h2>
             <p className="text-white text-sm sm:text-base lg:text-lg max-w-3xl font-light mx-auto mt-2 sm:mt-4">
               We'll take care of the talent Effortlessly build and manage a
               remote team of highly skilled professionals, carefully matched to
@@ -125,14 +125,14 @@ const AboutUsHero = () => {
           <section className="max-w-6xl mx-auto py-1 ">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div
-                className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl p-12 self-center
+                className="bg-gradient-to-br overflow-hidden from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl pt-8 
  text-center border border-white/10"
               >
-                <div className="tezzeracth2 text-7xl">60+</div>
-                <div className="tezzeracth2 text-2xl tracking-normal">
+                <h2 className="tezzeracth5 ">60+</h2>
+                <h2 className="tezzeractp5 ">
                   clients
-                </div>
-                 <div className=" ">
+                </h2>
+                <div className="!overflow-hidden flex items-row justify-center mb-[-100px] mt-[-20px] ">
                   <IconCloudDemo />
                 </div>
               </div>
@@ -141,7 +141,6 @@ const AboutUsHero = () => {
                 className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
  rounded-2xl p-12 text-center border border-white/10"
               >
-               
                 <div className="tezzeracth2 text-7xl">20+</div>
                 <div className="tezzeracth2 text-2xl tracking-normal">
                   industries
@@ -152,8 +151,8 @@ const AboutUsHero = () => {
                size-full overflow-hidden rounded-lg border bg-gradient-to-br from-[rgb(142,185,255)] to-white  pt-8"
               >
                 <div className="flex flex-col items-center">
-                  <h1 className="tezzeracth2 text-6xl">15+</h1>
-                  <div className="tezzeracth2 text-xl tracking-normal mt-[-30px]">
+                  <h2 className="tezzeracth5">15+</h2>
+                  <div className="tezzeractp5">
                     countries
                   </div>
                 </div>
