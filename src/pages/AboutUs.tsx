@@ -3,8 +3,9 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import TezzeractWhiteLogo from "@/assets/Tezzeract - Text Logo (White).webp";
 import { Globe } from "@/components/world-map";
-import { Ripple} from "@/components/Ripple";
-import Footer from '@/components/Footer';
+import { Ripple } from "@/components/Ripple";
+import Footer from "@/components/Footer";
+import { AnimatedBeam } from "@/components/AnimatedBeam";
 
 const AboutUsHero = () => {
   const [scale, setScale] = useState(1);
@@ -120,7 +121,6 @@ const AboutUsHero = () => {
           </div>
         </section>
         {/* Statistics Section */}
-        <Globe />
 
         <div
           className="bg-gradient-to-br from-[#00A9EE] to-[#00378A] py-[5%]
@@ -132,11 +132,14 @@ const AboutUsHero = () => {
                 className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl self-center
  p-12 text-center border border-white/10"
               >
-                <div className="text-center">
-                  <h1 className="tezzeracth2 text-7xl">15+</h1>
+                <div className="self-center flex justify-center items-center">
+                  <h2 className="tezzeracth2 text-7xl">15+</h2>
                 </div>
                 <div className="tezzeracth2 text-2xl tracking-normal">
                   countries
+                </div>
+                <div className="flex justify-center items-center ">
+                  <Globe className="px-40 pb-40 pt-8 md:pb-6" />
                 </div>
               </div>
               <div
@@ -157,6 +160,19 @@ const AboutUsHero = () => {
                   industries
                 </div>
               </div>
+              <div className="relative flex flex-col
+               size-full overflow-hidden rounded-lg border bg-gradient-to-br from-[rgb(142,185,255)] to-white  pt-8">
+                <div className="flex flex-col items-center">
+                  <h1 className="tezzeracth2 text-6xl">15+</h1>
+
+                  <div className="tezzeracth2 text-xl tracking-normal mt-[-30px]">
+                    countries
+                  </div>
+                </div>
+
+                <Globe className="top-[100px]" />
+                <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+              </div>
               <div
                 className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
 rounded-2xl p-8 text-center border border-white/10"
@@ -171,9 +187,7 @@ rounded-2xl p-8 text-center border border-white/10"
             </div>
           </section>
         </div>
-
         {/* Values Section */}
-
         <section className="max-w-7xl mx-auto py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-light text-white mb-4">
@@ -227,10 +241,9 @@ rounded-2xl p-8 text-center border border-white/10"
 
             {/* Center - Professional Image */}
             <div className="flex justify-center items-center">
-              
-                <div className="relative h-[500px] w-full overflow-hidden">
-  <Ripple />
-</div>
+              <div className="relative h-[500px] w-full overflow-hidden">
+                <Ripple />
+              </div>
             </div>
 
             {/* Right side - Features */}
@@ -285,11 +298,9 @@ rounded-2xl p-8 text-center border border-white/10"
               Start Your Transformation Today
             </Button>
           </div>
-          
         </section>
       </div>
-          <Footer />
-
+      <Footer />
     </div>
   );
 };
