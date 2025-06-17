@@ -5,7 +5,9 @@ import TezzeractWhiteLogo from "@/assets/Tezzeract - Text Logo (White).webp";
 import { Globe } from "@/components/world-map";
 import { Ripple } from "@/components/Ripple";
 import Footer from "@/components/Footer";
-import { AnimatedBeam } from "@/components/AnimatedBeam";
+import { IconCloudDemo } from "@/components/IconCloudImages";
+
+import { AnimatedBeamDemo } from "@/components/AnimatedUniBeam";
 
 const AboutUsHero = () => {
   const [scale, setScale] = useState(1);
@@ -44,7 +46,6 @@ const AboutUsHero = () => {
       }
       rafRef.current = requestAnimationFrame(handleScroll);
     };
-
     window.addEventListener("scroll", throttledHandleScroll, { passive: true });
 
     // Cleanup listener on component unmount
@@ -55,12 +56,10 @@ const AboutUsHero = () => {
       }
     };
   }, [handleScroll]);
-
   return (
     <div className="bg-[#242424]">
       {/* Navigation */}
       <Navigation />
-
       {/* Hero Section with Scroll Animation */}
       <section
         ref={sectionRef}
@@ -72,7 +71,6 @@ const AboutUsHero = () => {
       >
         {/* Gradient Mesh Background Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#00378A] to-[#00A9EE]"></div>
-
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
@@ -81,7 +79,6 @@ const AboutUsHero = () => {
             style={{ animationDelay: "2s" }}
           ></div>
         </div>
-
         <div className="relative z-10 flex items-center justify-center h-full px-4 sm:px-6">
           <div className="max-w-6xl mx-auto text-center flex flex-col items-center justify-center">
             {/* Main Headline */}
@@ -121,27 +118,12 @@ const AboutUsHero = () => {
           </div>
         </section>
         {/* Statistics Section */}
-
         <div
           className="bg-gradient-to-br from-[#00A9EE] to-[#00378A] py-[5%]
 -"
         >
           <section className="max-w-6xl mx-auto py-1 ">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div
-                className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl self-center
- p-12 text-center border border-white/10"
-              >
-                <div className="self-center flex justify-center items-center">
-                  <h2 className="tezzeracth2 text-7xl">15+</h2>
-                </div>
-                <div className="tezzeracth2 text-2xl tracking-normal">
-                  countries
-                </div>
-                <div className="flex justify-center items-center ">
-                  <Globe className="px-40 pb-40 pt-8 md:pb-6" />
-                </div>
-              </div>
               <div
                 className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl p-12 self-center
  text-center border border-white/10"
@@ -150,33 +132,35 @@ const AboutUsHero = () => {
                 <div className="tezzeracth2 text-2xl tracking-normal">
                   clients
                 </div>
+                 <div className=" ">
+                  <IconCloudDemo />
+                </div>
               </div>
+
               <div
                 className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
  rounded-2xl p-12 text-center border border-white/10"
               >
+               
                 <div className="tezzeracth2 text-7xl">20+</div>
                 <div className="tezzeracth2 text-2xl tracking-normal">
                   industries
                 </div>
               </div>
-              <div className="relative flex flex-col
-               size-full overflow-hidden rounded-lg border bg-gradient-to-br from-[rgb(142,185,255)] to-white  pt-8">
+              <div
+                className="relative flex flex-col
+               size-full overflow-hidden rounded-lg border bg-gradient-to-br from-[rgb(142,185,255)] to-white  pt-8"
+              >
                 <div className="flex flex-col items-center">
                   <h1 className="tezzeracth2 text-6xl">15+</h1>
-
                   <div className="tezzeracth2 text-xl tracking-normal mt-[-30px]">
                     countries
                   </div>
                 </div>
-
                 <Globe className="top-[100px]" />
                 <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
               </div>
-              <div
-                className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
-rounded-2xl p-8 text-center border border-white/10"
-              >
+              <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center rounded-2xl p-8 text-center border border-white/10">
                 <div className="tezzeracth2 text-7xl">150</div>
                 <div className="tezzeracth2 text-2xl tracking-normal">
                   successful
@@ -187,6 +171,7 @@ rounded-2xl p-8 text-center border border-white/10"
             </div>
           </section>
         </div>
+
         {/* Values Section */}
         <section className="max-w-7xl mx-auto py-20">
           <div className="text-center mb-16">
@@ -202,7 +187,6 @@ rounded-2xl p-8 text-center border border-white/10"
               competition.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             {/* Left side - Features */}
             <div className="space-y-6">
@@ -221,7 +205,6 @@ rounded-2xl p-8 text-center border border-white/10"
                   made to partner with humans, not overpower them.
                 </p>
               </div>
-
               {/* Feature 2 */}
               <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
                 <img
@@ -238,14 +221,12 @@ rounded-2xl p-8 text-center border border-white/10"
                 </p>
               </div>
             </div>
-
             {/* Center - Professional Image */}
             <div className="flex justify-center items-center">
               <div className="relative h-[500px] w-full overflow-hidden">
                 <Ripple />
               </div>
             </div>
-
             {/* Right side - Features */}
             <div className="space-y-6">
               {/* Feature 4 */}
@@ -263,7 +244,6 @@ rounded-2xl p-8 text-center border border-white/10"
                   real problems, not just demo-stage hype.
                 </p>
               </div>
-
               {/* Feature 5 */}
               <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
                 <img
@@ -279,8 +259,6 @@ rounded-2xl p-8 text-center border border-white/10"
                   evolving—and so are we, always pushing the edge.
                 </p>
               </div>
-
-              {/* Feature 6 */}
             </div>
           </div>
         </section>
