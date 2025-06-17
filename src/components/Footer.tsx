@@ -2,6 +2,8 @@ import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import TezzeractTypeface from "@/assets/Tezzeract - Text Logo (Gradient).webp";
 import TezzeractPP from "@/assets/Tezzeract-Profile-Photo.webp"
+import whiteLogo from "@/assets/Tezzeract - Symbolic Logo (Light).webp"
+
 
 const Footer = () => {
   return (
@@ -13,10 +15,14 @@ const Footer = () => {
         <div className="flex flex-col  lg:flex-row sm:flex-row gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
           {/* Company Info */}
           <div className="space-y-4 w-full lg:w-1/2">
-            <div className="flex items-center space-x-3 w-full sm:w-3/4 lg:w-2/3">
-              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                <div className="w-6 sm:w-8 h-6 sm:h-8 border-2 border-white rounded"></div>
-              </div>
+            <div className="flex items-center space-x-6 w-full sm:w-3/4 lg:w-2/3">
+             
+                <img
+                  src={whiteLogo}
+                  alt="Tezzeract Logo"
+                  className="w-8 sm:w-10 h-8 sm:h-10 object-contain"
+                />
+      
               <div>
                 <p className="text-xs sm:text-sm text-gray-300 font-thin">
                   Tezzeract (Pvt) Ltd specializing in digital scalability,
