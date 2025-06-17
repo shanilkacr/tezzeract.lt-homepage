@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "./Navigation";
 import LogoSlider from "./LogoSlider";
 import HeroVideo from "@/assets/Hero Loop V2.webm"; // Assuming you have a video file
 import { TextReveal } from "@/components/magicui/text-reveal";
-import { Navigate, useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
   const [scale, setScale] = useState(1);

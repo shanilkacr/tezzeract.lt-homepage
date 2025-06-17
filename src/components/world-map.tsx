@@ -13,14 +13,13 @@ const GLOBE_CONFIG: COBEOptions = {
   devicePixelRatio: 2,
   phi: 0,
   theta: 0.3,
-  dark: 1,
-  diffuse: 0.5,
-  
+  dark: 0,
+  diffuse: 0.4,
   mapSamples: 16000,
   mapBrightness: 1.2,
   baseColor: [1, 1, 1],
-markerColor: [0 / 255, 169 / 255, 238 / 255],  
-  glowColor: [0 / 255, 84 / 255, 119 / 255], // Reduced intensity #00A9EE
+  markerColor: [251 / 255, 100 / 255, 21 / 255],
+  glowColor: [1, 1, 1],
   markers: [
     { location: [14.5995, 120.9842], size: 0.03 },
     { location: [19.076, 72.8777], size: 0.1 },
@@ -102,7 +101,7 @@ export function Globe({
   return (
     <div
       className={cn(
-        "inset-0 mx-auto aspect-[1/1] w-full max-w-[800px]",
+        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
         className,
       )}
     >

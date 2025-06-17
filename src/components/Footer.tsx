@@ -12,15 +12,13 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="flex flex-col  lg:flex-row sm:flex-row gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
           {/* Company Info */}
-          <div className="space-y-8 w-full sm:w-full lg:w-1/2">
-            <div className="flex items-center space-x-6 w-full sm:w-3/4 lg:w-2/3">
-              <div className="w-10 sm:w-12 h-10 sm:h-12 items-center justify-center flex-shrink-0">
-           
-                  <img src={TezzeractPP} alt="tezzeract-profile-photo" className="rounded-lg" />
-         
+          <div className="space-y-4 w-full lg:w-1/2">
+            <div className="flex items-center space-x-3 w-full sm:w-3/4 lg:w-2/3">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-6 sm:w-8 h-6 sm:h-8 border-2 border-white rounded"></div>
               </div>
               <div>
-                <p className="text-sm sm:text-sm text-gray-300 font-thin">
+                <p className="text-xs sm:text-sm text-gray-300 font-thin">
                   Tezzeract (Pvt) Ltd specializing in digital scalability,
                   offering businesses seamless access to remote teams of highly
                   skilled professionals.
