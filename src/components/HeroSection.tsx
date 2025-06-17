@@ -1,13 +1,16 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "./Navigation";
 import LogoSlider from "./LogoSlider";
 import HeroVideo from "@/assets/Hero Loop V2.webm"; // Assuming you have a video file
+import { TextReveal } from "@/components/magicui/text-reveal";
 
 const HeroSection = () => {
   const [scale, setScale] = useState(1);
   const rafRef = useRef();
   const sectionRef = useRef(null);
+  const Navigate = useNavigate();
 
   const handleScroll = useCallback(() => {
     const viewportHeight = window.innerHeight;
@@ -110,11 +113,12 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-6 sm:pb-8 px-4 sm:px-0">
-              <Button
+              <Button onClick={ () => Navigate('/book-a-call') }      
                 className="w-[50%] sm:w-auto bg-gradient-to-r from-white to-[#D8F4FF] hover:bg-gradient-to-tr hover:from-[#00378AB0] hover:to-[#00A9EE] shadow-[0_0px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_-5px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl text-[#005D8A] font-thin hover:text-white text-sm sm:text-base transition-all duration-300 px-24 sm:px-8 py-4 sm:py-6 min-h-[48px] active:scale-95"
               >
                 Book a Free Strategy Call
               </Button>
+                
             </div>
 
 

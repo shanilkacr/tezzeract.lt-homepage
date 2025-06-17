@@ -36,7 +36,7 @@ const FinalCTA = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
         
           <Button className="bg-gradient-to-r from-white to-[#D8F4FF] hover:bg-gradient-to-bl hover:from-[#00378AB0] hover:to-[#00A9EE] shadow-[0_70px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_70px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl px-8 py-4 text-[#005D8A] font-thin hover:text-white transition-all duration-300 sm:px-12 sm:py-5">
-          Book a Free Strategy Call
+          Book a Free Strategy Calllll
           <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>

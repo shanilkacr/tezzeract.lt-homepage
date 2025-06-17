@@ -7,7 +7,7 @@ function BookACall() {
   return (
     <div>
 
-        <Navigation2 />
+    
         <BookCall />
         <Footer />      
     </div>
