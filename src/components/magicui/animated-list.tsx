@@ -18,7 +18,7 @@ export function AnimatedListItem({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <motion.div {...animations} layout className="mx-auto w-full">
+    <motion.div {...animations} layout className=" w-[80%]">
       {children}
     </motion.div>
   );
@@ -54,7 +54,7 @@ export const AnimatedList = React.memo(
 
     return (
       <div
-        className={cn(`flex flex-col items-center gap-4`, className)}
+        className={cn(`flex flex-col items-center gap-3`, className)}
         {...props}
       >
         <AnimatePresence>
