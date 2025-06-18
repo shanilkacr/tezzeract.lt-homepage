@@ -47,7 +47,7 @@ const BentoLayout = () => {
                 driving up to
               </h3>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 mb-3 sm:mb-4">
-                <div className="text-4xl sm:text-5xl lg:text-6xl font-light">
+                <div className="text-4xl w-40 sm:text-5xl lg:text-6xl font-light">
                   <NumberTicker value={80} />%
                 </div>
                 <div className="text-lg sm:text-xl lg:text-2xl leading-tight text-blue-100 font-light">
