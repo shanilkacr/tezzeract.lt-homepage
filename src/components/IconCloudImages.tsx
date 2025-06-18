@@ -20,7 +20,7 @@ const images = [
 
 export function IconCloudDemo() {
   return (
-    <div className=" flex  items-center justify-center ">
+    <div className="relative flex  items-center justify-center ">
       <IconCloud images={images} />
     </div>
   );

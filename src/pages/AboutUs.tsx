@@ -6,8 +6,10 @@ import { Globe } from "@/components/world-map";
 import { Ripple } from "@/components/Ripple";
 import Footer from "@/components/Footer";
 import { IconCloudDemo } from "@/components/IconCloudImages";
+ import { AnimatedBeamDemo } from "@/components/magicui/IndustriesAnimation";
+ import { AnimatedListDemo } from "@/components/magicui/ProjectsAnimation";
 
-import { AnimatedBeamDemo } from "@/components/AnimatedUniBeam";
+
 
 const AboutUsHero = () => {
   const [scale, setScale] = useState(1);
@@ -128,8 +130,8 @@ const AboutUsHero = () => {
                 className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl p-12 self-center
  text-center border border-white/10"
               >
-                <div className="tezzeracth2 text-7xl">60+</div>
-                <div className="tezzeracth2 text-2xl tracking-normal">
+                <div className="tezzeracth5">60+</div>
+                <div className="tezzeractp5 ">
                   clients
                 </div>
                  <div className=" ">
@@ -139,12 +141,15 @@ const AboutUsHero = () => {
 
               <div
                 className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
- rounded-2xl p-12 text-center border border-white/10"
+ rounded-2xl pt-12 text-center border border-white/10"
               >
                
-                <div className="tezzeracth2 text-7xl">20+</div>
-                <div className="tezzeracth2 text-2xl tracking-normal">
+                <div className="tezzeracth5">20+</div>
+                <div className="tezzeractp5">
                   industries
+                </div>
+                <div className=" ">
+                  <AnimatedBeamDemo />
                 </div>
               </div>
               <div
@@ -152,20 +157,23 @@ const AboutUsHero = () => {
                size-full overflow-hidden rounded-lg border bg-gradient-to-br from-[rgb(142,185,255)] to-white  pt-8"
               >
                 <div className="flex flex-col items-center">
-                  <h1 className="tezzeracth2 text-6xl">15+</h1>
-                  <div className="tezzeracth2 text-xl tracking-normal mt-[-30px]">
+                  <h1 className="tezzeracth5 ">15+</h1>
+                  <div className="tezzeractp5 ">
                     countries
                   </div>
                 </div>
                 <Globe className="top-[100px]" />
                 <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
               </div>
-              <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center rounded-2xl p-8 text-center border border-white/10">
-                <div className="tezzeracth2 text-7xl">150</div>
-                <div className="tezzeracth2 text-2xl tracking-normal">
+              <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center rounded-2xl pt-8 text-center border border-white/10">
+                <div className="tezzeracth5 ">150</div>
+                <div className="tezzeractp5 ">
                   successful
                   <br />
                   projects
+                </div>
+                <div className=" overflow-hidden h-[100px]">
+                <AnimatedListDemo />
                 </div>
               </div>
             </div>
