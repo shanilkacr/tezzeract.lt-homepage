@@ -8,6 +8,8 @@ import Footer from "@/components/Footer";
 import { IconCloudDemo } from "@/components/IconCloudImages";
  import { AnimatedBeamDemo } from "@/components/magicui/IndustriesAnimation";
  import { AnimatedListDemo } from "@/components/magicui/ProjectsAnimation";
+ import GrowthCTA from '@/components/GrowthCTA';
+
 
 
 
@@ -195,83 +197,89 @@ const AboutUsHero = () => {
               competition.
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            {/* Left side - Features */}
-            <div className="space-y-6">
-              {/* Feature 1 */}
-              <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <img
-                  src="src/assets/Collaboration Over Control.png"
-                  alt="Step 1"
-                  className="w-16 h-16 object-contain"
-                />
-                <h3 className="text-xl font-medium text-white mb-3">
-                  Collaboration Over Control
-                </h3>
-                <p className="text-white/70 leading-relaxed text-sm">
-                  We don’t replace people, we empower them. Our AI tools are
-                  made to partner with humans, not overpower them.
-                </p>
-              </div>
-              {/* Feature 2 */}
-              <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <img
-                  src="src/assets/Transparency.png"
-                  alt="Step 2"
-                  className="w-16 h-16 object-contain"
-                />
-                <h3 className="text-xl font-medium text-white mb-3">
-                  Transparency{" "}
-                </h3>
-                <p className="text-white/70 leading-relaxed text-sm">
-                  We communicate openly—about what our AI can do, what it can't,
-                  and how it makes decisions.
-                </p>
-              </div>
-            </div>
-            {/* Center - Professional Image */}
-            <div className="flex justify-center items-center">
-              <div className="relative h-[500px] w-full overflow-hidden">
-                <Ripple />
-              </div>
-            </div>
-            {/* Right side - Features */}
-            <div className="space-y-6">
-              {/* Feature 4 */}
-              <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <img
-                  src="src/assets/Real-World Impact.png"
-                  alt="Step 3"
-                  className="w-16 h-16 object-contain"
-                />
-                <h3 className="text-xl font-medium text-white mb-3">
-                  Real-World impact{" "}
-                </h3>
-                <p className="text-white/70 leading-relaxed text-sm">
-                  We build tech that actually works where it matters—solving
-                  real problems, not just demo-stage hype.
-                </p>
-              </div>
-              {/* Feature 5 */}
-              <div className="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <img
-                  src="src/assets/Relentless Innovation.png"
-                  alt="Step 4"
-                  className="w-16 h-16 object-contain"
-                />
-                <h3 className="text-xl font-medium text-white mb-3">
-                  Relentless Innovation{" "}
-                </h3>
-                <p className="text-white/70 leading-relaxed text-sm">
-                  We move fast, adapt faster, and never settle. AI is
-                  evolving—and so are we, always pushing the edge.
-                </p>
-              </div>
-            </div>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-center max-w-4xl mx-auto">
+  {/* Left Column */}
+  <div className="space-y-6">
+    {/* Feature 1 */}
+    <div className="relative p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm transition-colors duration-200 hover:border-white">
+      <div className="relative z-10">
+        <img
+          src="src/assets/Collaboration Over Control.png"
+          alt="Step 1"
+          className="w-16 h-16 object-contain"
+        />
+        <h3 className="text-xl font-medium text-white mb-3">
+          Collaboration Over Control
+        </h3>
+        <p className="text-white/70 leading-relaxed text-sm">
+          We don't replace people, we empower them. Our AI tools are
+          made to partner with humans, not overpower them.
+        </p>
+      </div>
+    </div>
+
+    {/* Feature 2 */}
+    <div className="relative p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm transition-colors duration-200 hover:border-white">
+      <div className="relative z-10">
+        <img
+          src="src/assets/Transparency.png"
+          alt="Step 2"
+          className="w-16 h-16 object-contain"
+        />
+        <h3 className="text-xl font-medium text-white mb-3">
+          Transparency
+        </h3>
+        <p className="text-white/70 leading-relaxed text-sm">
+          We communicate openly—about what our AI can do, what it can't,
+          and how it makes decisions.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Right Column */}
+  <div className="space-y-6">
+    {/* Feature 3 */}
+    <div className="relative p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm transition-colors duration-200 hover:border-white">
+      <div className="relative z-10">
+        <img
+          src="src/assets/Real-World Impact.png"
+          alt="Step 3"
+          className="w-16 h-16 object-contain"
+        />
+        <h3 className="text-xl font-medium text-white mb-3">
+          Real-World Impact
+        </h3>
+        <p className="text-white/70 leading-relaxed text-sm">
+          We build tech that actually works where it matters—solving
+          real problems, not just demo-stage hype.
+        </p>
+      </div>
+    </div>
+
+    {/* Feature 4 */}
+    <div className="relative p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm transition-colors duration-200 hover:border-white">
+      <div className="relative z-10">
+        <img
+          src="src/assets/Relentless Innovation.png"
+          alt="Step 4"
+          className="w-16 h-16 object-contain"
+        />
+        <h3 className="text-xl font-medium text-white mb-3">
+          Relentless Innovation
+        </h3>
+        <p className="text-white/70 leading-relaxed text-sm">
+          We move fast, adapt faster, and never settle. AI is
+          evolving—and so are we, always pushing the edge.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
         </section>
-        {/* CTA Section */}
-        <section className="max-w-4xl mx-auto py-20 text-center">
+        <GrowthCTA />
+        {/* <section className="max-w-4xl mx-auto py-20 text-center">
           <div className="bg-gradient-to-br from-[#00378A]/20 to-[#00A9EE]/20 rounded-3xl p-12 border border-white/10">
             <h2 className="text-3xl sm:text-4xl font-light text-white mb-6">
               Ready to Transform Your Business?
@@ -284,7 +292,7 @@ const AboutUsHero = () => {
               Start Your Transformation Today
             </Button>
           </div>
-        </section>
+        </section> */}
       </div>
       <Footer />
     </div>

@@ -8,7 +8,6 @@ import AIAgentic from "@/assets/Card 2 - V6.webm";
 const ServicesOverview = () => {
   const services = [
     {
-      tag: "Effortless Connectivity",
       title: "Automate your Workflows with AI",
       description:
         "Connect and automate your business processes with zero-friction logic that scales.",
@@ -16,7 +15,6 @@ const ServicesOverview = () => {
       asset: AutomateVideo,
     },
     {
-      tag: "Effortless Connectivity",
       title: "AI powered Agentic Automation",
       description:
         "Deploy intelligent agents that think, learn, and act autonomously. Integrate with your existing stack.",
@@ -24,7 +22,6 @@ const ServicesOverview = () => {
       asset: AIAgentic,
     },
     {
-      tag: "Effortless Connectivity",
       title: "Digital Transformation powered by AI",
       description:
         "Modernize legacy systems and rearchitect processes with AI-first strategies on the cloud.",
@@ -32,7 +29,6 @@ const ServicesOverview = () => {
       asset: DigitalVideo,
     },
     {
-      tag: "Effortless Connectivity",
       title: "Generative AI powered Creatives",
       description:
         "Leverage cutting-edge generative models to produce digital creatives, avatars, videos, and more.",
@@ -92,12 +88,8 @@ const ServicesOverview = () => {
               ></div>
 
               <div className="relative z-10 flex flex-col h-full">
-                <div className="flex flex-row justify-between items-center">
-                  <p className="bg-[radial-gradient(circle,_#FFFFFF20,_#FFFFFF50)] border border-white/20 text-white px-3 py-1 rounded-xl text-xs sm:text-sm font-light">
-                    {service.tag}
-                  </p>
-                </div>
-                <div className="mt-4 sm:mt-6">
+          
+                <div className="">
                   <h3 className="text-xl sm:text-2xl lg:text-3xl font-light text-white leading-tight mb-3 sm:mb-4  transition-colors">
                     {service.title}
                   </h3>
