@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import BookACall from "./pages/BookACall";
 import AboutUs from '@/pages/AboutUs';
 import Contact  from '@/pages/Contact';
+import NotFound from "@/pages/NotFound";  
 
 
 
@@ -24,6 +25,7 @@ const App = () => (
         <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="book-a-call" element={<BookACall />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
