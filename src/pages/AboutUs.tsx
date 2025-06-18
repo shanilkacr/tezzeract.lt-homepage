@@ -201,7 +201,8 @@ const AboutUsHero = () => {
   {/* Left Column */}
   <div className="space-y-6">
     {/* Feature 1 */}
-    <div className="relative p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm transition-colors duration-200 hover:border-white">
+    
+    <div className="relative p-6  bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm transition-colors duration-200 hover:border-white">
       <div className="relative z-10">
         <img
           src="src/assets/Collaboration Over Control.png"
