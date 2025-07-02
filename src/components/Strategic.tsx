@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import SplitType from 'split-type';
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -28,7 +28,10 @@ const Strategic = () => {
           const windowHeight = window.innerHeight;
 
           // Calculate progress: 0 at bottom, 1 at top of viewport
-          const progress = Math.max(0, Math.min(1, (windowHeight - top) / (windowHeight + height)));
+          const progress = Math.max(
+            0,
+            Math.min(1, (windowHeight - top) / (windowHeight + height))
+          );
 
           let scale = 1;
           let opacity = 1;
@@ -45,7 +48,6 @@ const Strategic = () => {
           }
 
           section.style.transform = `scale(${scale})`;
-        
         },
         {
           root: null, // Use viewport
@@ -67,7 +69,7 @@ const Strategic = () => {
 
     // Initialize SplitType
     const split = new SplitType(h2, {
-      types: ['words', 'chars']
+      types: ["words", "chars"],
     }) as SplitTypeResult;
 
     if (!split.chars) return;
@@ -76,22 +78,26 @@ const Strategic = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: h2,
-        start: 'top 90%',
-        end: '+=55%',
+        start: "top 90%",
+        end: "+=55%",
         scrub: 0.5,
-      }
+      },
     });
 
-    tl.to(split.chars, {
-      duration: 0.3,
-      color: '#00a9ee',
-      stagger: 0.1,
-    }, 0.1);
+    tl.to(
+      split.chars,
+      {
+        duration: 0.3,
+        color: "#00a9ee",
+        stagger: 0.1,
+      },
+      0.1
+    );
 
     // Cleanup
     return () => {
       split.revert();
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
@@ -107,11 +113,14 @@ const Strategic = () => {
       <section
         ref={sectionRef}
         className="bg-[#242424] py-20 h-[70vh] flex items-center justify-center relative overflow-hidden"
-        style={{ transition: 'transform 0.1s ease-out, opacity 0.1s ease-out' }}
+        style={{ transition: "transform 0.1s ease-out, opacity 0.1s ease-out" }}
       >
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 ref={h2Ref} className="tezzeracth3 text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light">
-            Tezzeract builds smart automation systems that handle routine tasks, freeing your team to focus on growing your business.
+          <h2
+            ref={h2Ref}
+            className="tezzeracth3 text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light"
+          >
+            Busywork is stealing your team's time. Let’s fix that
           </h2>
         </div>
       </section>
