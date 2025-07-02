@@ -49,9 +49,7 @@ const Footer = () => {
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
-                <span>
-                  No 752, Dr Danister De Silva Mawatha, Colombo 00900, Sri Lanka
-                </span>
+                <span></span>
               </div>
             </div>
           </div>
