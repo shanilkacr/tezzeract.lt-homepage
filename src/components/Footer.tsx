@@ -47,10 +47,6 @@ const Footer = () => {
                   info@tezzeract.net
                 </a>
               </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
-                <span></span>
-              </div>
             </div>
           </div>
 
