@@ -8,30 +8,29 @@ import AIAgentic from "@/assets/Card 2 - V6.webm";
 const ServicesOverview = () => {
   const services = [
     {
-      title: "Automate your Workflows with AI",
+      title: "Automate the Busywork. Focus on What Matters",
       description:
-        "Connect and automate your business processes with zero-friction logic that scales.",
+        "We connect your apps, tools, and systems, then automate tasks like data entry, file transfers, and reporting, so your team can focus on bigger things.",
       gradient: "from-blue-500 to-purple-600",
       asset: AutomateVideo,
     },
     {
-      title: "AI powered Agentic Automation",
-      description:
-        "Deploy intelligent agents that think, learn, and act autonomously. Integrate with your existing stack.",
+      title: "Add a Digital Team Member, Without Hiring One",
+      description:"We build intelligent agents that can answer emails, manage calendars, chase leads, and more — without you lifting a finger.",
       gradient: "from-purple-600 to-pink-600",
       asset: AIAgentic,
     },
     {
-      title: "Digital Transformation powered by AI",
+      title: "Upgrade Your Business Without Rebuilding It",
       description:
-        "Modernize legacy systems and rearchitect processes with AI-first strategies on the cloud.",
+        "We use AI to improve how your current systems work — cutting down time, cost, and chaos across operations, HR, finance, and more",
       gradient: "from-pink-600 to-red-500",
       asset: DigitalVideo,
     },
     {
-      title: "Generative AI powered Creatives",
+      title: "Create Stunning Content — No Creative Team Required",
       description:
-        "Leverage cutting-edge generative models to produce digital creatives, avatars, videos, and more.",
+        "We help you create AI-generated videos, visuals, product mockups, even virtual avatars — tailored for your brand and ready to use",
       gradient: "from-red-500 to-orange-500",
       asset: GenerativeVideo,
     },
