@@ -44,7 +44,7 @@ const Footer = () => {
                   href="mailto:info@tezzeract.net"
                   className="hover:text-white transition-colors"
                 >
-                  info@tezzeract.net
+                  simon@tezzeract.lt
                 </a>
               </div>
             </div>
