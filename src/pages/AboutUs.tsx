@@ -5,7 +5,7 @@ import TezzeractWhiteLogo from "@/assets/Tezzeract - Text Logo (White).webp";
 import { Globe } from "@/components/world-map";
 import { Ripple } from "@/components/Ripple";
 import Footer from "@/components/Footer";
-import { IconCloudDemo } from "@/components/IconCloudImages";
+import { IconCloudDemo } from "@/components/magicui/IconCloudImages";
  import { AnimatedBeamDemo } from "@/components/magicui/IndustriesAnimation";
  import { AnimatedListDemo } from "@/components/magicui/ProjectsAnimation";
  import GrowthCTA from '@/components/GrowthCTA';
@@ -129,7 +129,7 @@ const AboutUsHero = () => {
           <section className="max-w-6xl mx-auto py-1 ">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div
-                className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl p-12 self-center
+                className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm rounded-2xl pt-5 self-center
  text-center border border-white/10"
               >
                 <div className="tezzeracth5">60+</div>
@@ -142,8 +142,8 @@ const AboutUsHero = () => {
               </div>
 
               <div
-                className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center
- rounded-2xl pt-12 text-center border border-white/10"
+                className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm pt-5 self-center
+ rounded-2xl  text-center border border-white/10"
               >
                
                 <div className="tezzeracth5">20+</div>
@@ -156,7 +156,7 @@ const AboutUsHero = () => {
               </div>
               <div
                 className="relative flex flex-col
-               size-full overflow-hidden rounded-lg border bg-gradient-to-br from-[rgb(142,185,255)] to-white  pt-8"
+               size-full overflow-hidden rounded-lg border bg-gradient-to-br from-[rgb(142,185,255)] to-white  pt-5"
               >
                 <div className="flex flex-col items-center">
                   <h1 className="tezzeracth5 ">15+</h1>
@@ -167,7 +167,7 @@ const AboutUsHero = () => {
                 <Globe className="top-[100px]" />
                 <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
               </div>
-              <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center rounded-2xl pt-8 text-center border border-white/10">
+              <div className="bg-gradient-to-br from-[rgb(142,185,255)] to-white backdrop-blur-sm  self-center rounded-2xl pt-5 text-center border border-white/10">
                 <div className="tezzeracth5 ">150</div>
                 <div className="tezzeractp5 ">
                   successful
@@ -280,20 +280,7 @@ const AboutUsHero = () => {
 
         </section>
         <GrowthCTA />
-        {/* <section className="max-w-4xl mx-auto py-20 text-center">
-          <div className="bg-gradient-to-br from-[#00378A]/20 to-[#00A9EE]/20 rounded-3xl p-12 border border-white/10">
-            <h2 className="text-3xl sm:text-4xl font-light text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-white/80 mb-8 leading-relaxed">
-              Join hundreds of businesses that have already saved thousands of
-              hours with our AI solutions.
-            </p>
-            <Button className="bg-gradient-to-r from-white to-[#D8F4FF] hover:bg-gradient-to-tr hover:from-[#00378AB0] hover:to-[#00A9EE] shadow-[0_0px_70px_0_rgba(255,255,255,0.22)] hover:shadow-[0_-5px_70px_0_rgba(255,255,255,0.22)] border border-[#FFFFFF7A] rounded-xl text-[#005D8A] font-medium hover:text-white text-lg transition-all duration-300 px-8 py-6 active:scale-95">
-              Start Your Transformation Today
-            </Button>
-          </div>
-        </section> */}
+        
       </div>
       <Footer />
     </div>
